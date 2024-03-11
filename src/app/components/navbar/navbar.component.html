@@ -4,7 +4,7 @@
       <span class="example-spacer"></span>
       <button class="profile_nav_title" mat-button [matMenuTriggerFor]="profileMenu">Profile</button>
       <mat-menu #profileMenu="matMenu">
-        <button mat-menu-item>
+        <button mat-menu-item (click)="openSettingsDialog()">
           <mat-icon>settings</mat-icon>
           <span>Settings</span>
         </button>
@@ -18,5 +18,5 @@
         </button>
       </mat-menu>
     </mat-toolbar-row>
-  </mat-toolbar>
+</mat-toolbar>
   

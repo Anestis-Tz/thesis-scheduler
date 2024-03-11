@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Settings</h2>
+<mat-dialog-content>
+  <p>Change Your Current Settings</p>
+</mat-dialog-content>
+
+<div *ngFor="let lang of languageOptions">
+    <input type="radio" [value]="lang.code" [(ngModel)]="selectedLanguage" (change)="changeLanguage(lang.code)" name="language">
+    {{ lang.name }}
+</div>
+  
+  
