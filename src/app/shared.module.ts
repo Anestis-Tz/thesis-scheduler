@@ -1,6 +1,7 @@
 // shared.module.ts
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AngularMaterialModule } from './angular-material.module';
 
 // Translations
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -14,6 +15,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   imports: [
+    AngularMaterialModule,
     CommonModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -26,6 +28,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   providers: [HttpClient],
   exports: [
+    AngularMaterialModule,
     TranslateModule,
     CommonModule
   ]
