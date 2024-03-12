@@ -1,0 +1,25 @@
+.login-logo {
+  width: 15%;
+}
+.form-element {
+  padding: 5px 0px 25px 2px;
+  width: 100%;
+}
+.register-form-element {
+  padding: 5px 0px 25px 2px;
+  width: 50%;
+}
+.login-form {
+  width: 25%;
+  margin: 50px auto;
+}
+@media screen and (max-width: 1200px) {
+  .login-form {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .login-form {
+    width: 90%;
+  }
+}
