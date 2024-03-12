@@ -1,5 +1,9 @@
+// Modules
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared.module';
+
+// Components
 import { NavbarComponent } from './navbar/navbar.component';
 
 // Angular Material
@@ -29,7 +33,8 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    SharedModule
   ]
 })
 export class ComponentsModule { }

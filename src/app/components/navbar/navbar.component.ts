@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { SettingsDialogComponent } from '../../dialogs/settings-dialog/settings-dialog.component';
 import { DialogService } from '../../services/dialogService/dialog.service';
-
+import { LanguageService } from '../../services/languageService/language.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,9 +9,6 @@ import { DialogService } from '../../services/dialogService/dialog.service';
 
 export class NavbarComponent {
 
-  constructor(private dialogService: DialogService) { }
+  constructor( ) { }
 
-  openSettingsDialog() {
-    this.dialogService.openSettingsDialog()
-  }
 }

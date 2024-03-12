@@ -9,8 +9,12 @@ export class DialogService {
 
   constructor(private dialog: MatDialog) { }
 
-  openSettingsDialog() {
+    /** Open input dialog.
+   * @param data Configuration object {title,message,confirm,cancel,type,inputTitle,regex}
+   */
+  openSettingsDialog(data: any) {
     const dialogRef = this.dialog.open(SettingsDialogComponent, {
+      data: data,
       autoFocus: false,
       panelClass: 'generic-dialog'
     });

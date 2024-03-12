@@ -1,3 +1,3 @@
 {"gen_settings": "Settings", "gen_save": "Save", "gen_cancel": "Cancel", "gen_ok": "Ok", "gen_close": "Close", "gen_back": "Back","gen_next": "Next",
 "gen_yes": "Yes", "gen_no": "No", "gen_confirm": "Confirm", "gen_error": "Error", "gen_profile": "Profile", "gen_switch_theme": "Switch Theme",
-"gen_logout": "Logout", "change_settings": "Change Your Current Settings"}
+"gen_logout": "Logout", "change_settings": "Change Your Current Settings", "en": "English", "gr" : "Greek", "change_lang": "Change Language", "app_title": "Online Class Scheduler"}

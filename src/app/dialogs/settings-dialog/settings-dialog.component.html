@@ -1,11 +1,28 @@
-<h2 mat-dialog-title>Settings</h2>
-<mat-dialog-content>
-  <p>Change Your Current Settings</p>
-</mat-dialog-content>
+<!-- Header -->
+<h1 class="py-3">
+  <mat-icon>settings</mat-icon>
+  Change Language
+</h1>
 
-<div *ngFor="let lang of languageOptions">
-    <input type="radio" [value]="lang.code" [(ngModel)]="selectedLanguage" (change)="changeLanguage(lang.code)" name="language">
-    {{ lang.name }}
+<!-- Options -->
+<!-- <mat-form-field appearance="fill">
+  <mat-label>Choose a language</mat-label>
+  <mat-select >
+    <mat-option value="en">English</mat-option>
+    <mat-option value="el">Greek</mat-option>
+  </mat-select>
+</mat-form-field> -->
+
+<mat-toolbar color="primary"> 
+  <mat-toolbar-row></mat-toolbar-row>
+</mat-toolbar>
+<select class="form-select" (change)="ChangeLang($event)" id="">
+  <option [selected]="selectedLanguage === 'en'" value="en">English</option>
+  <option [selected]="selectedLanguage === 'gr'" value="gr">Greek</option>
+</select>
+
+<!-- Buttons -->
+<div class="mt-5">
+  <button class="button bblg sm-100 my-3" (click)="confirm()">{{ "gen_confirm" | translate }}</button>
+  <button class="button bblg sm-100 my-3" (click)="close()" *ngIf="data.cancel">{{ "gen_cancel" | translate }}</button>
 </div>
-  
-  
