@@ -1,4 +1,8 @@
-{"gen_welcome": "Καλώσορίσατε", "gen_settings": "Ρυθμίσεις", "gen_save": "Αποθήκευση", "gen_cancel": "Ακύρωση", "gen_ok": "Εντάξει", "gen_close": "Κλείσιμο", "gen_back": "Πίσω",
-"gen_next": "Επόμενο", "gen_yes": "Ναι", "gen_no": "Όχι", "gen_confirm": "Επιβεβαίωση", "gen_error": "Σφάλμα", "gen_profile": "Προφίλ",
-"gen_switch_theme": "Αλλάξτε Θέμα", "gen_logout": "Αποσύνδεση", "change_settings": "Αλλαγή Ρυθμίσεων", "en": "Αγγλικά", "gr" : "Ελληνικά", "change_lang": "Αλλαγή Γλώσσας",
-"app_title": "Κατανομητής Εργαστηρίων"}
+{"gen_welcome": "Καλώσορίσατε", "gen_settings": "Ρυθμίσεις", "gen_save": "Αποθήκευση", "gen_cancel": "Ακύρωση", "gen_ok": "Εντάξει", "gen_close":
+"Κλείσιμο", "gen_back": "Πίσω", "gen_next": "Επόμενο", "gen_yes": "Ναι", "gen_no": "Όχι", "gen_confirm": "Επιβεβαίωση", "gen_error": "Σφάλμα",
+"gen_profile": "Προφίλ", "gen_switch_theme": "Αλλάξτε Θέμα", "gen_logout": "Αποσύνδεση", "change_settings": "Αλλαγή Ρυθμίσεων", "en": "Αγγλικά",
+"gr" : "Ελληνικά", "change_lang": "Αλλαγή Γλώσσας", "app_title": "Κατανομητής Εργαστηρίων", "gen_email": "Email", "gen_password": "Κωδικός",
+"gen_login": "Σύνδεση", "gen_register": "Εγγραφή", "gen_required": "Υποχρεωτικό","gen_invalid_email": "Μη έγκυρο email",
+"gen_invalid_password": "Μη έγκυρος κωδικός", "gen_invalid_email_password": "Μη έγκυρο email ή κωδικός", "gen_email_exists": "Μη έγκυρο όνομα",
+"register_btn":"Κάνε εγγραφή τώρα", "register_msg":"Δεν είστε ακόμη χρήστης;","terms_title": "Όροι Χρήσης", "terms_msg":"Έχω διαβάσει & συμφωνώ με τους",
+"register2_msg":"Εισαγάγετε το email σας και δημιουργήστε έναν κωδικό πρόσβασης για κάνετε εγγραφή"}
