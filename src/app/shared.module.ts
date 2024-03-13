@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http)
+  return new TranslateHttpLoader(http);
 }
 
 @NgModule({
@@ -19,18 +19,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     CommonModule,
     HttpClientModule,
     TranslateModule.forRoot({
-        loader: {
-          provide: TranslateLoader,
-          useFactory: (HttpLoaderFactory),
-          deps: [HttpClient]
-        }
-      })
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [HttpClient],
-  exports: [
-    AngularMaterialModule,
-    TranslateModule,
-    CommonModule
-  ]
+  exports: [AngularMaterialModule, TranslateModule, CommonModule],
 })
-export class SharedModule { }
+export class SharedModule {}
