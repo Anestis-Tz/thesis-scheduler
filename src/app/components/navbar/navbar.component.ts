@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { DialogService } from '../../services/dialogService/dialog.service';
-import { LanguageService } from '../../services/languageService/language.service';
+import { SidebarService } from '../../services/sidebar.service';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,6 +9,9 @@ import { LanguageService } from '../../services/languageService/language.service
 
 export class NavbarComponent {
 
-  constructor( ) { }
+  constructor(private sidebarService: SidebarService) { }
 
+  toggleSidebar() {
+    this.sidebarService.toggle();
+  }
 }

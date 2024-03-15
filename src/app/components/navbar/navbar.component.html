@@ -1,22 +1,26 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <a [href]="'/'" class="app_title">{{ "app_title" | translate }}</a>
-      <span class="example-spacer"></span>
-      <button class="profile_nav_title" mat-button [matMenuTriggerFor]="profileMenu">{{"gen_profile" | translate}}</button>
-      <mat-menu #profileMenu="matMenu">
-        <a mat-menu-item [href]="'/settings'">
-          <mat-icon>settings</mat-icon>
-          <span>{{ 'gen_settings' | translate }}</span>
-        </a>
-        <button mat-menu-item>
-          <mat-icon>palette</mat-icon>
-          <span>{{ 'gen_switch_theme' | translate }}</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>exit_to_app</mat-icon>
-          <span>{{ 'gen_logout' | translate }}</span>
-        </button>
-      </mat-menu>
-    </mat-toolbar-row>
+  <mat-toolbar-row>
+    <!-- Sandwich Button for Sidebar -->
+    <button class="profile_nav_title sandwich_button" mat-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <a [href]="'/'" class="app_title">{{ "app_title" | translate }}</a>
+    <span class="example-spacer"></span>
+    <button class="profile_nav_title" mat-button [matMenuTriggerFor]="profileMenu">{{"gen_profile" | translate}}</button>
+    <mat-menu #profileMenu="matMenu">
+      <a mat-menu-item [href]="'/settings'">
+        <mat-icon>settings</mat-icon>
+        <span>{{ 'gen_settings' | translate }}</span>
+      </a>
+      <button mat-menu-item>
+        <mat-icon>palette</mat-icon>
+        <span>{{ 'gen_switch_theme' | translate }}</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>{{ 'gen_logout' | translate }}</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
 </mat-toolbar>
-  

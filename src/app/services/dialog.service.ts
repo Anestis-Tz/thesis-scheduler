@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { SettingsDialogComponent } from '../../dialogs/settings-dialog/settings-dialog.component';
+import { SettingsDialogComponent } from '../dialogs/settings-dialog/settings-dialog.component';
 
 @Injectable({
   providedIn: 'root'
