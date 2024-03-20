@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.less']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
   isOpen = false;
 
-  constructor(private sidebarService: SidebarService) { }
-
-  ngOnInit() {
-    this.sidebarService.isOpen$.subscribe(isOpen => {
+  constructor(private sidebarService: SidebarService) {
+    this.sidebarService.getState().subscribe(isOpen => {
       this.isOpen = isOpen;
     });
+  }
+
+  toggleSidebar() {
+    this.sidebarService.toggle();
   }
 }
