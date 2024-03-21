@@ -1,28 +1,20 @@
-<!-- Header -->
-<h1 class="py-3">
-  <mat-icon>settings</mat-icon>
-  Change Language
-</h1>
+<div class="dialog-container">
+  <h1 class="dialog-title">
+    {{ "change_lang" | translate }}
+  </h1>
 
-<!-- Options -->
-<!-- <mat-form-field appearance="fill">
-  <mat-label>Choose a language</mat-label>
-  <mat-select >
-    <mat-option value="en">English</mat-option>
-    <mat-option value="el">Greek</mat-option>
-  </mat-select>
-</mat-form-field> -->
+  <select class="form-select" (change)="ChangeLang($event)">
+    <option [selected]="selectedLanguage === 'en'" value="en">English</option>
+    <option [selected]="selectedLanguage === 'gr'" value="gr">Greek</option>
+  </select>
 
-<mat-toolbar color="primary"> 
-  <mat-toolbar-row></mat-toolbar-row>
-</mat-toolbar>
-<select class="form-select" (change)="ChangeLang($event)" id="">
-  <option [selected]="selectedLanguage === 'en'" value="en">English</option>
-  <option [selected]="selectedLanguage === 'gr'" value="gr">Greek</option>
-</select>
-
-<!-- Buttons -->
-<div class="mt-5">
-  <button class="button bblg sm-100 my-3" (click)="confirm()">{{ "gen_confirm" | translate }}</button>
-  <button class="button bblg sm-100 my-3" (click)="close()" *ngIf="data.cancel">{{ "gen_cancel" | translate }}</button>
+  <!-- Buttons -->
+  <div class="dialog-buttons">
+    <button class="btn confirm" (click)="confirm()">
+      {{ "gen_confirm" | translate }}
+    </button>
+    <button class="btn cancel" (click)="close()" *ngIf="data.cancel">
+      {{ "gen_cancel" | translate }}
+    </button>
+  </div>
 </div>
