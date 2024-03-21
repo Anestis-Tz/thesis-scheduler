@@ -1,17 +1,47 @@
 <div class="container-fluid settings-container">
     <div class="row mb-3">
         <div class="col-md-12">
-            <h1>
+            <h1 class="settings-title">
                 {{ "gen_settings" | translate }}
             </h1>
-            <!-- Change Language -->
-            <h2>{{ "change_lang" | translate }}</h2>
-            <button class="button" (click)="changeLanguageDialog()">{{ "change_lang" | translate }}</button>
+            <h2 class="settings-second-title">
+                Change your current settings
+            </h2>
         </div>
     </div>
-    <div class="row my-5">
-        <div class="col-md-12">
-
+    <div class="row">
+        <!-- Card for Change Language -->
+        <div class="col-md-4 setting-card">
+            <div class="card">
+                <i class="card-icon fa fa-language"></i>
+                <div class="card-body">
+                    <h5 class="card-title">{{ "change_lang" | translate }}</h5>
+                    <p class="card-text">Modify the language settings</p>
+                    <button class="card-button" (click)="changeLanguageDialog()">{{ "gen_select" | translate }}</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card for Change Theme -->
+        <div class="col-md-4 setting-card">
+            <div class="card">
+                <i class="card-icon fa fa-paint-brush"></i>
+                <div class="card-body">
+                    <h5 class="card-title">{{ "change_theme" | translate }}</h5>
+                    <p class="card-text">Select the visual theme</p>
+                    <button class="card-button">{{ "gen_select" | translate }}</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card for Change Password -->
+        <div class="col-md-4 setting-card">
+            <div class="card">
+                <i class="card-icon fa fa-lock"></i>
+                <div class="card-body">
+                    <h5 class="card-title">{{ "change_password" | translate }}</h5>
+                    <p class="card-text">Update your account password</p>
+                    <button class="card-button">{{ "gen_select" | translate }}</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
