@@ -1,11 +1,10 @@
-
 mat-toolbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
-  
+
   .mat-toolbar-row {
     justify-content: space-between;
     
@@ -19,32 +18,26 @@ mat-toolbar {
       align-items: center;
       justify-content: center;
 
+      &:hover .hamburger-icon > .hamburger-line {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
       .hamburger-icon {
         display: block;
         position: relative;
         width: 30px;
         height: 20px;
 
-        &:hover {
-          .hamburger-line:nth-child(1), .hamburger-line:nth-child(2), .hamburger-line:nth-child(3) {
-            background: rgba(255, 255, 255, 0.1);
-          }
-        }
         .hamburger-line {
-          height: 3px; /*Adjust to change the thickness of the lines */
           background: #fff;
+          height: 3px; /* Adjust to change the thickness of the lines */
           position: absolute;
           left: 0;
           width: 100%;
           border-radius: 3px;
           transition: 0.4s;
-          
-          &:not(:last-child) {
-            margin-bottom: 5px;
-          }
-
         }
-        
+
         .hamburger-line:nth-child(1) { top: 0; }
         .hamburger-line:nth-child(2) { top: 8px; }
         .hamburger-line:nth-child(3) { top: 16px; }
