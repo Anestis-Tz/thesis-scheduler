@@ -9,6 +9,44 @@ import { Observable } from 'rxjs';
 export class SidebarService {
   private sidebarState = new BehaviorSubject<boolean>(false);
 
+  mainItems: any = {
+    SETTINGS: {
+      data: {
+          label: "Settings",
+          icon: 'fas fa-search h2',
+          location: "/settings",
+          action: "changeLocation('/settings')"
+      }
+    }
+  }
+
+  bottonItems: any = {
+    LOGOUT: {
+      data: {
+          label: "gen_logout",
+          icon: 'fas fa-sign-out-alt h2',
+          location: "",
+          action: "logOut()"
+      }
+    }
+  }
+
+  getMainSidebarItems() {
+    let items = [];
+    for (let item in this.mainItems) {
+      items.push(this.mainItems[item].data);
+    }
+    return items;
+  }
+
+  getBottomSidebarItems() {
+    let items = [];
+    for (let botomItem in this.bottonItems) {
+      items.push(this.bottonItems[botomItem]);
+    }
+    return items;
+  }
+
   toggle() {
     this.sidebarState.next(!this.sidebarState.value);
   }
