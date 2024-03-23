@@ -32,6 +32,6 @@ export class SidebarComponent implements OnInit{
   //Actions
   changeLocation(location: any) {
     this.sidebarService.toggle();
-    window.location.hash = "#!" + location;
+    window.location = location;
   };
 }

@@ -15,7 +15,7 @@ export class SidebarService {
           label: "Settings",
           icon: 'fas fa-cog h2',
           location: "/settings",
-          action: "changeLocation('/settings')"
+          action: "changeLocation('settings')"
       }
     },
     PROFILE: {
@@ -30,16 +30,16 @@ export class SidebarService {
       data: {
           label: "Test",
           icon: 'fas fa-user-circle h2',
-          location: "/test",
+          location: "test",
           action: "changeLocation('/test')"
       }
     }
   }
 
-  bottonItems: any = {
+  mainBottomItems: any = {
     LOGOUT: {
       data: {
-          label: "gen_logout",
+          label: "Logout",
           icon: 'fas fa-sign-out-alt h2',
           location: "",
           action: "logOut()"
@@ -56,11 +56,11 @@ export class SidebarService {
   }
 
   getBottomSidebarItems() {
-    let items = [];
-    for (let botomItem in this.bottonItems) {
-      items.push(this.bottonItems[botomItem]);
+    let bottomItems = [];
+    for (let bottomItem in this.mainBottomItems) {
+      bottomItems.push(this.mainBottomItems[bottomItem]);
     }
-    return items;
+    return bottomItems;
   }
 
   toggle() {
