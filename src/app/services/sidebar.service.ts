@@ -17,7 +17,15 @@ export class SidebarService {
           location: "/settings",
           action: "changeLocation('/settings')"
       }
-    }
+    },
+    PROFILE: {
+      data: {
+          label: "Profile",
+          icon: 'fab fa-angular h1',
+          location: "/profile",
+          action: "changeLocation('/profile')"
+      }
+    },
   }
 
   bottonItems: any = {

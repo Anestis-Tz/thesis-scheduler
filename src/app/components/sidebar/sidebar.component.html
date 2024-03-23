@@ -2,17 +2,16 @@
 <div class="sidebar" [class.open]="isOpen">
 
   <!-- Sidebar Overlay -->
-  <div class="d-none sidebar-overlay" focus-element="navigationService.closeSidebar()" type="'SIDEBAR_CLOSE'"
-        layer="400">
+  <div class="d-none sidebar-overlay" focus-element="navigationService.closeSidebar()" type="'SIDEBAR_CLOSE'">
   </div>
 
   <!-- Sidebar Main Items -->
-  <div class="sidebar-items" *ngFor="let item of items"
-   >
-  <i [ngClass]="item.icon"></i>
-  <h3 class="item-style">
-    {{ item.label }}
-  </h3>
+  <div class="sidebar-items" *ngFor="let item of items">
+    <i [ngClass]="item.icon"></i>
+    <h3 class="item-style">
+      {{ item.label }}
+    </h3>
+    <p class="fas fa-user h2">dd</p>
   </div>
 
 </div>
