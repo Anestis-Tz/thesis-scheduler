@@ -13,7 +13,7 @@ export class SidebarService {
     SETTINGS: {
       data: {
           label: "Settings",
-          icon: 'fas fa-search h2',
+          icon: 'fas fa-cog h2',
           location: "/settings",
           action: "changeLocation('/settings')"
       }
@@ -21,11 +21,19 @@ export class SidebarService {
     PROFILE: {
       data: {
           label: "Profile",
-          icon: 'fab fa-angular h1',
+          icon: 'fas fa-user-circle h2',
           location: "/profile",
           action: "changeLocation('/profile')"
       }
     },
+    TEST: {
+      data: {
+          label: "Test",
+          icon: 'fas fa-user-circle h2',
+          location: "/test",
+          action: "changeLocation('/test')"
+      }
+    }
   }
 
   bottonItems: any = {
