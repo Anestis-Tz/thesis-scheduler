@@ -26,12 +26,12 @@ export class SidebarService {
           action: "changeLocation('/profile')"
       }
     },
-    TEST: {
+    CLASS_REGISTRATION: {
       data: {
-          label: "Test",
+          label: "Class Registration",
           icon: 'fas fa-user-circle h2',
           location: "test",
-          action: "changeLocation('/test')"
+          action: "changeLocation('/class-registration')"
       }
     }
   }
