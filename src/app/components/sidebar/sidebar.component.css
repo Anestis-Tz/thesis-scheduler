@@ -9,39 +9,33 @@
   z-index: 1000;
   height: 100vh;
 }
-
 .sidebar.open {
   left: 0;
 }
-
 .sidebar-items {
   padding-top: 10px;
-
-  &:hover {
-    background-color: rgba(0,0,0,0.1);
-    cursor: pointer;
-  }
 }
-
+.sidebar-items:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
 .item-style {
-  padding      : 10px 20px 10px 5px;
-  position     : absolute;
-  display      : inline;
-  width        : 200px;
-  white-space  : nowrap;
-  overflow     : hidden !important;
+  padding: 10px 20px 10px 5px;
+  position: absolute;
+  display: inline;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden !important;
   text-overflow: ellipsis;
-  font-size    : 1rem;
-  left         : 35%;
+  font-size: 1rem;
+  left: 35%;
 }
-
 i {
-  padding      : 10px 20px;
-  font-size    : 1.5rem;
+  padding: 10px 20px;
+  font-size: 1.5rem;
   align-items: center;
   left: 20%;
 }
-
 .sidebar-overlay {
   width: 100vw;
   height: 100vh;
@@ -50,4 +44,3 @@ i {
   left: 0;
   z-index: 999;
 }
-
