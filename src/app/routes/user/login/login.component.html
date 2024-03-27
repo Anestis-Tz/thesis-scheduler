@@ -1,10 +1,10 @@
-<div class="container-fluid">
+<div class="container-fluid login-container">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center text-style">{{ "gen_welcome" | translate }}</h1>
-
+            
             <!-- Login Form -->
             <div class="form-group login-form" [formGroup]="loginGroup">
+                <h1 class="text-center text-style">{{ "gen_welcome" | translate }}</h1>
                 <mat-form-field class="form-element" appearance="fill">
                     <mat-label>{{ "gen_email" | translate }}</mat-label>
                     <input matInput formControlName="email" type="email" placeholder="{{ 'gen_email' | translate }}">
@@ -26,7 +26,7 @@
                 </button>
 
                 <!-- Register -->
-                <p class="pt-3">
+                <p class="pt-3 register-msg">
                     {{'register_msg' | translate}}
                     <a class="pl-2 clr-theme" href="/register">{{'register_btn' | translate}}</a>
                 </p>

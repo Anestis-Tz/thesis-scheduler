@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarService } from '../../services/sidebar.service';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,16 +12,22 @@ import { SidebarService } from '../../services/sidebar.service';
 export class SidebarComponent implements OnInit{
   isOpen = false;
 
-  constructor(private sidebarService: SidebarService) {
+  constructor(private sidebarService: SidebarService, private router: Router) {
     this.sidebarService.getState().subscribe(isOpen => {
       this.isOpen = isOpen;
     });
   }
 
   ngOnInit() {
-    console.log(this.sidebarService.getMainSidebarItems());
+    this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.isLoginRoute = event.url === '/login';
+    });
   }
-  
+
+  isLoginRoute: boolean = false;
+
   // Get main sidebar items
   items: any = this.sidebarService.getMainSidebarItems();
   // Get bottom sidebar items
