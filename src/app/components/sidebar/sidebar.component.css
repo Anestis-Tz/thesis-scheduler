@@ -12,12 +12,33 @@
 .sidebar.open {
   left: 0;
 }
+.sidebar-simple {
+  width: 4%;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  transform: translateZ(0);
+  transition: width 0.5s ease 0s;
+  background-color: #222831;
+}
+.sidebar-simple .sidebar-items {
+  padding-left: 20%;
+}
+.sidebar-simple .sidebar-items:first-child {
+  margin-top: 85%;
+}
+.sidebar-simple i {
+  color: #fff;
+}
 .sidebar-items {
   padding-top: 10px;
 }
 .sidebar-items:hover {
   background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: 0.2s;
 }
 .item-style {
   padding: 10px 20px 10px 5px;

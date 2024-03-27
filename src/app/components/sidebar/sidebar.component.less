@@ -14,6 +14,30 @@
   left: 0;
 }
 
+.sidebar-simple {
+    width     : 4%;
+    top: 0;
+    height: 100%;
+    position  : absolute;
+    z-index   : 1;
+    left      : 0;
+    transform : translateZ(0);
+    transition: width .5s ease 0s;
+    background-color: #222831;
+    
+    .sidebar-items {
+      padding-left: 20%;
+    }
+
+    .sidebar-items:first-child {
+      margin-top: 85%;;
+    }
+
+    i {
+      color: #fff;
+    }
+}
+
 .sidebar-items {
   padding-top: 10px;
 

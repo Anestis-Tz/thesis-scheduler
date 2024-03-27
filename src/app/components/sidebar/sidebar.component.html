@@ -20,5 +20,15 @@
 
 </div>
 
-  <!-- Sidebar Overlay -->
-  <div *ngIf="isOpen" class="sidebar-overlay" (click)="toggleSidebar()"></div>
+<div class="sidebar-simple" >
+
+  <div class="sidebar-items" *ngFor="let item of items">
+    <i [ngClass]="item.icon"></i>
+  </div>
+    
+
+</div>
+
+
+<!-- Sidebar Overlay -->
+<div *ngIf="isOpen" class="sidebar-overlay" (click)="toggleSidebar()"></div>
