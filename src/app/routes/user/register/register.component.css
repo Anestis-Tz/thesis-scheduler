@@ -1,12 +1,13 @@
 /* General body styling */
 body {
+  font-family: 'Arial', sans-serif;
   background-color: #222831;
   color: #EEEEEE;
   margin: 0;
   padding: 0;
 }
-/* Styling for the container */
-.login-container {
+/* Container styling */
+.register-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +29,11 @@ body {
   color: #00ADB5;
   margin-bottom: 20px;
 }
+.register2-msg {
+  color: #EEEEEE;
+  margin-bottom: 20px;
+  font-size: 1vw;
+}
 /* Form styling */
 .login-form {
   background-color: #393E46;
@@ -41,7 +47,8 @@ body {
   width: 100%;
   margin-bottom: 15px;
 }
-input {
+input,
+mat-checkbox {
   color: #EEEEEE;
 }
 /* Button styling */
@@ -73,14 +80,7 @@ a:hover {
   color: #EEEEEE;
   cursor: pointer;
 }
-.clr-theme {
-  color: #00ADB5;
-}
-.register-msg {
+.terms-msg {
   color: #EEEEEE;
-}
-.login2-msg {
-  color: #EEEEEE;
-  margin-bottom: 20px;
-  font-size: 1vw;
+  font-size: 0.8vw;
 }

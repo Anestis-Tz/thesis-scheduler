@@ -15,7 +15,7 @@ export class FooterComponent implements OnInit{
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      this.isLoginRoute = event.url === '/login';
+      this.isLoginRoute = event.url === '/login' || event.url === '/register';
     });
   }
 

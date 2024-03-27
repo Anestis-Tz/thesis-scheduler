@@ -1,16 +1,13 @@
-<div class="container-fluid">
+<div class="container-fluid register-container">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center text-style">{{ "register_btn" | translate }}</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <!-- Welcome Message -->
-            <h3 class="text-center">{{ 'register2_msg' | translate }}</h3>
             <!-- Register Form -->
             <div class="form-group mx-auto login-form" [formGroup]="registerGroup">
-
+                <!-- Welcome Message -->
+                <h1 class="text-center text-style">{{ "register_btn" | translate }}</h1>
+    
+                <h3 class="text-center register2-msg">{{ 'register2_msg' | translate }}</h3>
+                
                 <mat-form-field class="form-element" appearance="fill">
                     <mat-label>{{ 'gen_email' | translate }}</mat-label>
                     <input type="'email'" matInput placeholder="{{'gen_email' | translate}}" formControlName="email">
@@ -34,13 +31,28 @@
                         | translate }}</mat-error> -->
                 </mat-form-field>
 
+                <mat-form-field class="form-element" appearance="fill">
+                    <mat-label>Confirm Password</mat-label>
+                    <input [type]="hide ? 'password' : 'text'" matInput
+                        placeholder="{{'gen_password' | translate}}" formControlName="password">
+                    <mat-icon matSuffix (click)="hide = !hide">{{ hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+                    <!-- Errors -->
+                    <!-- <mat-error *ngIf="registerGroup.controls.password.errors?.required">{{ 'error_required_error'
+                        | translate }}</mat-error>
+                    <mat-error *ngIf="registerGroup.controls.password.errors?.pattern">{{ 'error_password_regex'
+                        | translate }}</mat-error> -->
+                </mat-form-field>
+
                 <section class="form-element">
-                    <mat-checkbox formControlName="privacy">{{ 'terms_msg' | translate }}
+                    <mat-checkbox formControlName="privacy">
+                        <span class="terms-msg"> {{ 'terms_msg' | translate }} </span>
                         <a href="/terms">{{ 'terms_title' | translate }}</a>
                     </mat-checkbox>
                 </section>
 
                 <button class="button" (click)="register()">
+                    <i class="pr-1 fa fa-sign-in-alt"></i>
                     {{ 'gen_register' | translate }}
                 </button>
         </div>
