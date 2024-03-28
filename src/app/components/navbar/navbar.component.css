@@ -1,5 +1,5 @@
 mat-toolbar {
-  width: 96%;
+  width: 100%;
   position: fixed;
   top: 0;
   right: 0;
@@ -62,7 +62,6 @@ mat-toolbar .mat-toolbar-row .app_title {
   font-size: 1.3vw;
   text-decoration: none;
   color: white;
-  margin-left: -5%;
 }
 mat-toolbar .mat-toolbar-row .app_title:hover {
   cursor: pointer;
