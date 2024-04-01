@@ -18,6 +18,7 @@ import { SettingsComponent } from './routes/settings/settings.component';
 import { LoginComponent } from './routes/user/login/login.component';
 import { RegisterComponent } from './routes/user/register/register.component';
 import { TermsComponent } from './routes/terms/terms.component';
+import { CalendarComponent } from './routes/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TermsComponent } from './routes/terms/terms.component';
     SettingsComponent,
     LoginComponent,
     RegisterComponent,
-    TermsComponent
+    TermsComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
