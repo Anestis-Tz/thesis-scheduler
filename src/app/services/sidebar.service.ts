@@ -23,19 +23,20 @@ export class SidebarService {
           label: "Profile",
           icon: 'fas fa-user-circle h2',
           location: "/profile",
-          action: "changeLocation('/profile')"
+          action: "changeLocation('profile')"
       }
     },
-    CLASS_REGISTRATION: {
+    APPOINTMENT: {
       data: {
-          label: "Class Registration",
-          icon: 'fas fa-user-circle h2',
-          location: "test",
-          action: "changeLocation('/class-registration')"
+          label: "Appointment Planner",
+          icon: 'fas fa-calendar-alt h2',
+          location: "/scheduler",
+          action: "changeLocation('scheduler')"
       }
     }
   }
 
+  // Not working for now, needs fixing
   mainBottomItems: any = {
     LOGOUT: {
       data: {
