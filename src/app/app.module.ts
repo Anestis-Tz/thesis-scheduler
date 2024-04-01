@@ -7,6 +7,8 @@ import { DialogsModule } from './dialogs/dialogs.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SharedModule } from './shared.module';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 // Material for Routes
 import { MatIconModule } from '@angular/material/icon';
@@ -37,7 +39,8 @@ import { CalendarComponent } from './routes/calendar/calendar.component';
     DialogsModule,
     MatIconModule,
     MatSelectModule,
-    SharedModule
+    SharedModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
   ],
   providers: [
     provideAnimationsAsync()
