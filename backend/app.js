@@ -2,6 +2,8 @@ const express = require("express");
 
 const app = express();
 
+
+
 const BodyParser = require('body-parser');
 
 const User = require('./models/user');
@@ -38,5 +40,7 @@ app.use('/api/users', (req, res, next) => {
     ]
     res.status(200).json({ message: 'Users fetched successfully', users: users });
 });
+
+
 
 module.exports = app;

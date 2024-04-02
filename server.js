@@ -1,8 +1,9 @@
 const app = require("./backend/app");
 const debug = require("debug")("backend:server");
 const http = require("http");
+const mongoose = require("mongoose");
 
-const normalizePort = val => {
+const normalizePort = (val) => {
   var port = parseInt(val, 10);
 
   if (isNaN(port)) {
@@ -18,7 +19,7 @@ const normalizePort = val => {
   return false;
 };
 
-const onError = error => {
+const onError = (error) => {
   if (error.syscall !== "listen") {
     throw error;
   }
@@ -49,4 +50,16 @@ app.set("port", port);
 const server = http.createServer(app);
 server.on("error", onError);
 server.on("listening", onListening);
-server.listen(port);
+mongoose
+  .connect(
+    "mongodb+srv://admin:6TDW75ZiCj5TGULB@backenddb.9poodmf.mongodb.net/Thesis-API?retryWrites=true&w=majority&appName=BackendDB"
+  )
+  .then(() => {
+    server.listen(port, () => {
+      console.log(`Server started on port ${port}`);
+    });
+    console.log("Connected to MongoDB");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
