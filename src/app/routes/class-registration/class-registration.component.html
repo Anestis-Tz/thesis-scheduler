@@ -1,7 +1,7 @@
 <mat-horizontal-stepper #stepper class="class-registration-container">
   <!-- Step 1: Class Selection -->
   <mat-step [completed]="selectedClass">
-    <ng-template matStepLabel><mat-icon>class</mat-icon> Select a class</ng-template>
+    <ng-template matStepLabel class="step-label"><mat-icon>class</mat-icon> Select a class</ng-template>
     <mat-card>
       <mat-card-content>
         <form [formGroup]="firstFormGroup">
@@ -17,7 +17,7 @@
               </mat-form-field>
             </mat-grid-tile>
           </mat-grid-list>
-          <button mat-raised-button color="primary" matStepperNext class="full-width-button">
+          <button mat-raised-button color="primary" matStepperNext class="next-button">
             Next <mat-icon>arrow_forward</mat-icon>
           </button>
         </form>
@@ -27,7 +27,7 @@
   
   <!-- Step 2: Lecture Time Selection -->
   <mat-step [completed]="selectedLecture">
-    <ng-template matStepLabel><mat-icon>access_time</mat-icon> Select a lecture time</ng-template>
+    <ng-template matStepLabel class="step-label"><mat-icon>access_time</mat-icon> Select a lecture time</ng-template>
     <mat-card>
       <mat-card-content>
         <form [formGroup]="secondFormGroup">
@@ -43,7 +43,7 @@
               </mat-form-field>
             </mat-grid-tile>
           </mat-grid-list>
-          <button mat-raised-button color="primary" matStepperNext class="full-width-button">
+          <button mat-raised-button color="primary" matStepperNext class="next-button">
             Next <mat-icon>arrow_forward</mat-icon>
           </button>
         </form>
@@ -53,13 +53,13 @@
 
   <!-- Step 3: Overview and Submission -->
   <mat-step>
-    <ng-template matStepLabel><mat-icon>check_circle_outline</mat-icon> Overview and Confirm</ng-template>
+    <ng-template matStepLabel class="step-label"><mat-icon>check_circle_outline</mat-icon> Overview and Confirm</ng-template>
     <mat-card>
       <mat-card-content class="overview-content">
         <h3>Your Selection:</h3>
         <p><strong>Class:</strong> {{ getSelectedClassViewValue() }}</p>
         <p><strong>Lecture Time:</strong> {{ getSelectedLectureViewValue() }}</p>
-        <button mat-raised-button color="accent" (click)="submit()" class="full-width-button">
+        <button mat-raised-button color="accent" (click)="submit()" class="confirm-button">
           Confirm and Submit <mat-icon>check</mat-icon>
         </button>
       </mat-card-content>
