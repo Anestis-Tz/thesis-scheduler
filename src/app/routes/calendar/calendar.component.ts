@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarEvent, CalendarEventAction, CalendarEventTimesChangedEvent, CalendarView } from 'angular-calendar';
 import { EventColor } from 'calendar-utils';
+import { environment } from '../../../environment';
 
 const colors: Record<string, EventColor> = {
   red: {
@@ -40,6 +41,8 @@ const colors: Record<string, EventColor> = {
 })
 export class CalendarComponent {
   @ViewChild('modalContent', { static: true }) modalContent!: TemplateRef<any>;
+
+  features = environment.features;
 
   view: CalendarView = CalendarView.Month;
 

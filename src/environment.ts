@@ -3,7 +3,7 @@ export const environment = {
     production: false,
     appVersion: "v0.0.1",
     features: {
-        appointmentsEnabled: false,
+        appointmentsEnabled: true,
         classRegistrationEnabled: true,
     }
 };

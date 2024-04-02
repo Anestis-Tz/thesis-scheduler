@@ -6,14 +6,15 @@ import { CalendarComponent } from './routes/calendar/calendar.component';
 import { LoginComponent } from './routes/user/login/login.component';
 import { RegisterComponent } from './routes/user/register/register.component';
 import { TermsComponent } from './routes/terms/terms.component';
+import { ClassRegistrationComponent } from './routes/class-registration/class-registration.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'settings', component: SettingsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'scheduler', component: CalendarComponent },
+  { path: 'class-registration', component: ClassRegistrationComponent }
 ];
 
 @NgModule({

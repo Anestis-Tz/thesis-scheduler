@@ -21,6 +21,7 @@ import { LoginComponent } from './routes/user/login/login.component';
 import { RegisterComponent } from './routes/user/register/register.component';
 import { TermsComponent } from './routes/terms/terms.component';
 import { CalendarComponent } from './routes/calendar/calendar.component';
+import { ClassRegistrationComponent } from './routes/class-registration/class-registration.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CalendarComponent } from './routes/calendar/calendar.component';
     LoginComponent,
     RegisterComponent,
     TermsComponent,
-    CalendarComponent
+    CalendarComponent,
+    ClassRegistrationComponent
   ],
   imports: [
     BrowserModule,
