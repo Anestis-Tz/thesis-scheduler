@@ -1,1 +1,47 @@
-<p>class-registration works!</p>
+<mat-horizontal-stepper #stepper class="class-registration-container">
+  
+    <!-- Selection of class -->
+    <mat-step [completed]="selectedClass">
+      <ng-template matStepLabel>Select a class</ng-template>
+      <form [formGroup]="firstFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Class</mat-label>
+          <mat-select formControlName="firstCtrl" (selectionChange)="setAvailableLectures($event.value)">
+            <mat-option *ngFor="let class of availableClasses" [value]="class.value">
+              {{ class.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button matStepperNext>Next</button>
+      </form>
+    </mat-step>
+    
+    <!-- Selection of lecture time -->
+    <mat-step [completed]="selectedLecture">
+      <ng-template matStepLabel>Select a lecture time</ng-template>
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Lecture time</mat-label>
+          <mat-select formControlName="secondCtrl" (selectionChange)="selectedLecture = $event.value">
+            <mat-option *ngFor="let lecture of availableLectures" [value]="lecture.value">
+              {{ lecture.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button matStepperNext>Next</button>
+      </form>
+    </mat-step>
+    
+    <!-- Overview and submission -->
+    <mat-step>
+      <ng-template matStepLabel>Overview and Confirm</ng-template>
+      <div class="overview-content">
+        <h3>Your Selection:</h3>
+        <p><strong>Class:</strong> {{ getSelectedClassViewValue() }}</p>
+        <p><strong>Lecture Time:</strong> {{ getSelectedLectureViewValue() }}</p>
+        <button mat-button class="submit-button" (click)="submit()">Confirm and Submit</button>
+      </div>
+    </mat-step>
+  
+  </mat-horizontal-stepper>
+  

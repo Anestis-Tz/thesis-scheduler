@@ -12,12 +12,12 @@ const colors: Record<string, EventColor> = {
     secondary: '#FAE3E3',
   },
   blue: {
-    primary: '#1e90ff',
-    secondary: '#D1E8FF',
+    primary: '#222831',
+    secondary: '#393E46',
   },
   yellow: {
-    primary: '#e3bc08',
-    secondary: '#FDF1BA',
+    primary: '#00ADB5',
+    secondary: '#EEEEEE',
   },
 };
 
@@ -83,7 +83,7 @@ export class CalendarComponent {
       start: subDays(startOfDay(new Date()), 1),
       end: addDays(new Date(), 1),
       title: 'A 3 day event',
-      color: { ...colors['red'] },
+      color: { ...colors['secondary'] },
       actions: this.actions,
       allDay: true,
       resizable: {
@@ -95,7 +95,7 @@ export class CalendarComponent {
     {
       start: startOfDay(new Date()),
       title: 'An event with no end date',
-      color: { ...colors['yellow'] },
+      color: { ...colors['#222831'] },
       actions: this.actions,
     },
     {
