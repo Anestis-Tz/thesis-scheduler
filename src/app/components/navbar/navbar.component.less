@@ -1,47 +1,56 @@
 mat-toolbar {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 10;
+  width           : 100%;
+  position        : fixed;
+  top             : 0;
+  right           : 0;
+  z-index         : 10;
   background-color: rgb(34, 40, 49);
 
   .mat-toolbar-row {
     justify-content: space-between;
-    
+
     .sidebar-button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 10px;
-      margin: 0;
-      display: flex;
-      align-items: center;
+      background     : none;
+      border         : none;
+      cursor         : pointer;
+      padding        : 10px;
+      margin         : 0;
+      display        : flex;
+      align-items    : center;
       justify-content: center;
 
-      &:hover .hamburger-icon > .hamburger-line {
+      &:hover .hamburger-icon>.hamburger-line {
         background: rgba(255, 255, 255, 0.1);
       }
 
       .hamburger-icon {
-        display: block;
+        display : block;
         position: relative;
-        width: 30px;
-        height: 20px;
+        width   : 30px;
+        height  : 20px;
 
         .hamburger-line {
-          background: #fff;
-          height: 3px; /* Adjust to change the thickness of the lines */
-          position: absolute;
-          left: 0;
-          width: 100%;
+          background   : #fff;
+          height       : 3px;
+          /* Adjust to change the thickness of the lines */
+          position     : absolute;
+          left         : 0;
+          width        : 100%;
           border-radius: 3px;
-          transition: 0.4s;
+          transition   : 0.4s;
         }
 
-        .hamburger-line:nth-child(1) { top: 0; }
-        .hamburger-line:nth-child(2) { top: 8px; }
-        .hamburger-line:nth-child(3) { top: 16px; }
+        .hamburger-line:nth-child(1) {
+          top: 0;
+        }
+
+        .hamburger-line:nth-child(2) {
+          top: 8px;
+        }
+
+        .hamburger-line:nth-child(3) {
+          top: 16px;
+        }
       }
     }
 
@@ -53,16 +62,16 @@ mat-toolbar {
       color: white;
 
       &:hover {
-        cursor: pointer;
-        color: rgba(255, 255, 255, 0.1);
+        cursor    : pointer;
+        color     : rgba(255, 255, 255, 0.1);
         transition: 0.4s;
       }
     }
 
     .app_title {
-      font-size: 1.3vw;
+      font-size      : 1.3vw;
       text-decoration: none;
-      color: white;
+      color          : white;
 
       &:hover {
         cursor: pointer;

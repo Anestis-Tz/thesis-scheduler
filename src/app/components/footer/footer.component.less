@@ -1,62 +1,64 @@
 .footer {
-    width: 100%;
-    padding: 20px;
-    background-color: #222831;
-    color: #fff;
-    box-sizing: border-box;
+  width           : 100%;
+  padding         : 20px;
+  background-color: #222831;
+  color           : #fff;
+  box-sizing      : border-box;
 
-    .footer-card {
-      background-color: transparent;
-      box-shadow: none;
-    }
+  .footer-card {
+    background-color: transparent;
+    box-shadow      : none;
+  }
 
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+  .footer-content {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : flex-start;
 
-      .link-container {
-        display: flex;
-        flex-direction: row;
+    .link-container {
+      display       : flex;
+      flex-direction: row;
 
-        .link-section {
-            margin-right: 20px;
-        }
+      .link-section {
+        margin-right: 20px;
       }
     }
+  }
 
-    h3, h4 {
-      margin-bottom: 0.5em;
+  h3,
+  h4 {
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    font-size  : 0.9em;
+    line-height: 1.6;
+    margin-top : 0;
+  }
+
+  .social-links {
+    display    : flex;
+    align-items: center;
+
+    mat-icon-button {
+      color: #EEEEEE;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
     }
+  }
 
-    p {
-      font-size: 0.9em;
-      line-height: 1.6;
-      margin-top: 0;
-    }   
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items   : center;
+    }
 
     .social-links {
-      display: flex;
-      align-items: center;
-
-      mat-icon-button {
-        color: #EEEEEE;
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-        }
-      }
+      justify-content: center;
+      width          : 100%;
+      margin-top     : 1em;
     }
-
-    @media (max-width: 768px) {
-      .footer-content {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .social-links {
-        justify-content: center;
-        width: 100%;
-        margin-top: 1em;
-      }
-    }
+  }
 }

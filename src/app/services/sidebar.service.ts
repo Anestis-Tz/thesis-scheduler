@@ -76,7 +76,7 @@ export class SidebarService {
   getBottomSidebarItems() {
     let bottomItems = [];
     for (let bottomItem in this.mainBottomItems) {
-      bottomItems.push(this.mainBottomItems[bottomItem]);
+      bottomItems.push(this.mainBottomItems[bottomItem].data);
     }
     return bottomItems;
   }

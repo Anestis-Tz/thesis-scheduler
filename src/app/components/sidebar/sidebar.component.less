@@ -1,13 +1,13 @@
 .sidebar {
-  position: fixed;
-  top: 64px;
-  left: -250px;
-  width: 250px;
-  transition: left 0.3s;
+  position        : fixed;
+  top             : 64px;
+  left            : -250px;
+  width           : 250px;
+  transition      : left 0.3s;
   background-color: #222831;
-  color: #EEEEEE;
-  z-index: 1000;
-  height: 100vh;
+  color           : #EEEEEE;
+  z-index         : 1000;
+  height          : 100vh;
 }
 
 .sidebar.open {
@@ -15,41 +15,57 @@
 }
 
 .sidebar-simple {
-    width     : 4%;
-    top: 0;
-    height: 100%;
-    position  : absolute;
-    z-index   : 1;
-    left      : 0;
-    transform : translateZ(0);
-    transition: width .5s ease 0s;
-    background-color: #222831;
-    
-    .sidebar-items {
-      padding-left: 20%;
-    }
+  width           : 4%;
+  top             : 0;
+  height          : 100%;
+  position        : absolute;
+  z-index         : 1;
+  left            : 0;
+  transform       : translateZ(0);
+  transition      : width .5s ease 0s;
+  background-color: #222831;
 
-    .sidebar-items:first-child {
-      margin-top: 85%;;
-    }
+  .sidebar-items {
+    padding-left: 20%;
+  }
 
-    i {
-      color: #EEEEEE;
-    }
+  .sidebar-items:first-child {
+    margin-top: 85%;
+    ;
+  }
+
+  i {
+    color: #EEEEEE;
+  }
 }
 
 .sidebar-items {
   padding-top: 10px;
 
   &:hover {
-    background-color: rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: 0.2s;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor          : pointer;
+    transition      : 0.2s;
+  }
+}
+
+.sidebar-bottom-items {
+  position      : absolute;
+  width         : 100%;
+  padding-bottom: 15px;
+  color         : #EEEEEE;
+  bottom        : 8%;
+  align-items   : center;
+  padding-top   : 10px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor          : pointer;
+    transition      : 0.2s;
   }
 }
 
 .item-style {
-  padding      : 10px 20px 10px 5px;
   position     : absolute;
   display      : inline;
   width        : 200px;
@@ -58,21 +74,20 @@
   text-overflow: ellipsis;
   font-size    : 1rem;
   left         : 25%;
+  padding-top  : 3px;
 }
 
 i {
-  padding      : 10px 20px;
-  font-size    : 1.5rem;
-  align-items: center;
+  font-size   : 1.5rem;
+  align-items : center;
   padding-left: 10%;
 }
 
 .sidebar-overlay {
-  width: 100vw;
-  height: 100vh;
+  width   : 100vw;
+  height  : 100vh;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
+  top     : 0;
+  left    : 0;
+  z-index : 999;
 }
-

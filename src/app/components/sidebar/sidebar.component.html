@@ -7,11 +7,10 @@
     <h3 class="item-style">
       {{ item.label }}
     </h3>
-    <!-- <p class="fas fa-user h2">dd</p> -->
   </div>
 
   <!-- Sidebar Bottom Items -->
-  <div class="sidebar-bottom-items" *ngFor="let bottomItem of bottomItems">
+  <div class="sidebar-bottom-items" *ngFor="let bottomItem of bottomItems" (click)="changeLocation(bottomItem.location)">
     <i [ngClass]="bottomItem.icon"></i>
     <h3 class="item-style">
       {{ bottomItem.label }}
