@@ -6,7 +6,7 @@
        [style.margin-left.px]="i < 2 ? -3 : 0">
     <i [ngClass]="item.icon"></i>
     <h3 class="item-style">
-      {{ item.label }}
+      {{ item.label | translate }}
     </h3>
   </div>
 
@@ -14,7 +14,7 @@
   <div class="sidebar-bottom-items" *ngFor="let bottomItem of bottomItems" (click)="changeLocation(bottomItem.location)">
     <i [ngClass]="bottomItem.icon"></i>
     <h3 class="item-style">
-      {{ bottomItem.label }}
+      {{ bottomItem.label | translate }}
     </h3>
   </div>
 

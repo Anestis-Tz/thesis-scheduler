@@ -4,8 +4,8 @@
   </h1>
 
   <select class="form-select" (change)="ChangeLang($event)">
-    <option [selected]="selectedLanguage === 'en'" value="en">English</option>
-    <option [selected]="selectedLanguage === 'gr'" value="gr">Greek</option>
+    <option [selected]="selectedLanguage === 'en'" value="en">{{ "english" | translate }}</option>
+    <option [selected]="selectedLanguage === 'gr'" value="gr">{{ "greek" | translate }}</option>
   </select>
 
   <!-- Buttons -->
