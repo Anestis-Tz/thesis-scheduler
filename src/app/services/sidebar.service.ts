@@ -43,7 +43,7 @@ export class SidebarService {
 
   constructor() {
     // Conditional Sidebar Items
-    if (this.features.classRegistrationEnabled) {
+    if (this.features.classRegistration.enabled) {
       this.mainItems.REGISTRATION = {
         data: {
           label: 'Class Registration',
@@ -53,7 +53,7 @@ export class SidebarService {
         },
       };
     }
-    if (this.features.appointmentsEnabled) {
+    if (this.features.appointments.enabled) {
       this.mainItems.APPOINTMENT = {
         data: {
           label: 'Appointment Planner',

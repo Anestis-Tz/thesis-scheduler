@@ -1,13 +1,31 @@
 .sidebar {
   position: fixed;
-  top: 64px;
+  top: 7vh;
   left: -250px;
   width: 250px;
   transition: left 0.3s;
   background-color: #222831;
   color: #EEEEEE;
   z-index: 1000;
-  height: 100vh;
+  height: 95vh;
+}
+.item-style {
+  position: absolute;
+  display: inline;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  left: 25%;
+  padding-top: 3px;
+  align-items: center;
+}
+i {
+  font-size: 1.5rem;
+  align-items: center;
+  padding-left: 10%;
+  color: #EEEEEE;
 }
 .sidebar.open {
   left: 0;
@@ -26,14 +44,11 @@
 .sidebar-simple .sidebar-items {
   padding-left: 20%;
 }
-.sidebar-simple .sidebar-items:first-child {
-  margin-top: 85%;
-}
-.sidebar-simple i {
-  color: #EEEEEE;
-}
 .sidebar-items {
   padding-top: 10px;
+  display: flex;
+  justify-content: start;
+  height: 70px;
 }
 .sidebar-items:hover {
   background-color: rgba(0, 0, 0, 0.1);
@@ -43,9 +58,8 @@
 .sidebar-bottom-items {
   position: absolute;
   width: 100%;
-  padding-bottom: 15px;
   color: #EEEEEE;
-  bottom: 8%;
+  bottom: 2.5%;
   align-items: center;
   padding-top: 10px;
 }
@@ -53,22 +67,6 @@
   background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.2s;
-}
-.item-style {
-  position: absolute;
-  display: inline;
-  width: 200px;
-  white-space: nowrap;
-  overflow: hidden !important;
-  text-overflow: ellipsis;
-  font-size: 1rem;
-  left: 25%;
-  padding-top: 3px;
-}
-i {
-  font-size: 1.5rem;
-  align-items: center;
-  padding-left: 10%;
 }
 .sidebar-overlay {
   width: 100vw;

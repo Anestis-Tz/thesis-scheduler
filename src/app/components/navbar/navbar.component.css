@@ -47,9 +47,6 @@ mat-toolbar .mat-toolbar-row .sidebar-button .hamburger-icon .hamburger-line:nth
 mat-toolbar .mat-toolbar-row .sidebar-button .hamburger-icon .hamburger-line:nth-child(3) {
   top: 16px;
 }
-mat-toolbar .mat-toolbar-row .spacer {
-  flex: 1 1 auto;
-}
 mat-toolbar .mat-toolbar-row .nav-settings-btn {
   color: white;
 }
@@ -62,6 +59,7 @@ mat-toolbar .mat-toolbar-row .app_title {
   font-size: 1.3vw;
   text-decoration: none;
   color: white;
+  padding-left: 0%;
 }
 mat-toolbar .mat-toolbar-row .app_title:hover {
   cursor: pointer;
