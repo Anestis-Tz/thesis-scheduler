@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SidebarService } from '../../services/sidebar.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { environment } from '../../../environment';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,6 +12,7 @@ import { filter } from 'rxjs/operators';
 
 export class SidebarComponent implements OnInit{
   isOpen = false;
+  features = environment.features;
 
   constructor(private sidebarService: SidebarService, private router: Router) {
     this.sidebarService.getState().subscribe(isOpen => {

@@ -9,6 +9,9 @@ export const environment = {
         classRegistration: {
             enabled: true,
             isRegistrationOpen: true,
+        },
+        sidebar: {
+            hasSidebarSimple: false
         }
     }
 };
