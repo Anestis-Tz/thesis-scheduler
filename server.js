@@ -1,7 +1,6 @@
 const app = require("./backend/app");
 const debug = require("debug")("backend:server");
 const http = require("http");
-const mongoose = require("mongoose");
 
 const normalizePort = (val) => {
   var port = parseInt(val, 10);

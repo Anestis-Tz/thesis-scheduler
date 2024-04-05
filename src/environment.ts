@@ -12,6 +12,9 @@ export const environment = {
         },
         sidebar: {
             hasSidebarSimple: false
-        }
+        },
+        footer: {
+            hasFooter: false
+        },
     }
 };
