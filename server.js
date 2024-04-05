@@ -50,16 +50,7 @@ app.set("port", port);
 const server = http.createServer(app);
 server.on("error", onError);
 server.on("listening", onListening);
-mongoose
-  .connect(
-    "mongodb+srv://admin:6TDW75ZiCj5TGULB@backenddb.9poodmf.mongodb.net/Thesis-API?retryWrites=true&w=majority&appName=BackendDB"
-  )
-  .then(() => {
-    server.listen(port, () => {
-      console.log(`Server started on port ${port}`);
-    });
-    console.log("Connected to MongoDB");
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+
+server.listen(port, () => {
+  console.log(`Server started on port ${port}`);
+});

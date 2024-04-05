@@ -1,30 +1,29 @@
 <div class="container-fluid login-container">
     <div class="row">
         <div class="col-md-12">
-            
+            <mat-spinner *ngIf="isLoading"></mat-spinner>
             <!-- Login Form -->
             <div class="form-group login-form" [formGroup]="loginGroup">
                 <h1 class="text-center text-style">{{ "gen_welcome" | translate }}</h1>
                 <h3 class="text-center login2-msg"> Login to continue</h3>
-                <mat-form-field class="form-element" appearance="fill">
-                    <mat-label>{{ "gen_email" | translate }}</mat-label>
-                    <input matInput formControlName="email" type="email" placeholder="{{ 'gen_email' | translate }}">
-                    <!-- <mat-error *ngIf="loginGroup.controls.email.errors?.required">{{ "gen_required" | translate }}</mat-error>
-                    <mat-error *ngIf="loginGroup.controls.email.errors?.pattern">{{ "gen_invalid_email" | translate }}</mat-error> -->
-                </mat-form-field>
+                    <mat-form-field class="form-element" appearance="fill">
+                        <mat-label>{{ "gen_email" | translate }}</mat-label>
+                        <input matInput formControlName="email" type="email" placeholder="{{ 'gen_email' | translate }}">
+                        <mat-error *ngIf="">{{ "gen_invalid_email" | translate }}</mat-error>
+                    </mat-form-field>
 
-                <mat-form-field class="form-element" appearance="fill">
-                    <mat-label>{{ "gen_password" | translate }}</mat-label>
-                    <input matInput formControlName="password" type="password" placeholder="{{ 'gen_password' | translate }}">
-                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    <!-- <mat-error *ngIf="loginGroup.controls.password.errors?.required">{{'error_required_error' | translate}}</mat-error> -->
-                </mat-form-field>
+                    <mat-form-field class="form-element" appearance="fill">
+                        <mat-label>{{ "gen_password" | translate }}</mat-label>
+                        <input matInput formControlName="password" type="password" placeholder="{{ 'gen_password' | translate }}">
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        <mat-error *ngIf="">{{'error_required_error' | translate}}</mat-error>
+                    </mat-form-field>
 
 
-                <button class="button" (click)="login()" [disabled]="loginGroup.status == 'INVALID'">
-                    <i class="pr-1 fa fa-sign-in-alt"></i>
-                    {{'gen_login' | translate}}
-                </button>
+                    <button class="button" (click)="login()" [disabled]="loginGroup.status == 'INVALID'">
+                        <i class="pr-1 fa fa-sign-in-alt"></i>
+                        {{'gen_login' | translate}}
+                    </button>
 
                 <!-- Register -->
                 <p class="pt-3 register-msg">

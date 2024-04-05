@@ -1,6 +1,9 @@
-// Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AppInitializer } from './interceptors/app.initializer';
+
+// Modules
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
 import { DialogsModule } from './dialogs/dialogs.module';
@@ -31,7 +34,7 @@ import { ClassRegistrationComponent } from './routes/class-registration/class-re
     RegisterComponent,
     TermsComponent,
     CalendarComponent,
-    ClassRegistrationComponent
+    ClassRegistrationComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,11 +45,15 @@ import { ClassRegistrationComponent } from './routes/class-registration/class-re
     MatIconModule,
     MatSelectModule,
     SharedModule,
-    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    { provide: HTTP_INTERCEPTORS, useClass: AppInitializer, multi: true },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

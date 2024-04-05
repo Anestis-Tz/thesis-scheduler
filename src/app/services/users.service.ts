@@ -11,10 +11,10 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers() {
-    this.http.get('http://localhost:3000/api/users').subscribe((usersData) => {
-      this.users = usersData as Users[];
-      console.log(this.users);
-    });
-  }
+  // getUsers() {
+  //   this.http.get('http://localhost:3000/api/users').subscribe((usersData) => {
+  //     this.users = usersData as Users[];
+  //     console.log(this.users);
+  //   });
+  // }
 }
