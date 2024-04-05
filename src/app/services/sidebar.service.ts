@@ -11,9 +11,17 @@ export class SidebarService {
   features = environment.features;
 
   mainItems: any = {
+    HOME: {
+      data: {
+        label: 'home',
+        icon: 'fas fa-home h2',
+        location: '/',
+        action: "changeLocation('')",
+      },
+    },
     SETTINGS: {
       data: {
-        label: 'Settings',
+        label: 'settings',
         icon: 'fas fa-cog h2',
         location: '/settings',
         action: "changeLocation('settings')",
@@ -21,7 +29,7 @@ export class SidebarService {
     },
     PROFILE: {
       data: {
-        label: 'Profile',
+        label: 'profile',
         icon: 'fas fa-user-circle h2',
         location: '/profile',
         action: "changeLocation('profile')",
@@ -33,7 +41,7 @@ export class SidebarService {
   mainBottomItems: any = {
     LOGOUT: {
       data: {
-        label: 'Logout',
+        label: 'logout',
         icon: 'fas fa-sign-out-alt h2',
         location: '',
         action: 'logOut()',
@@ -43,20 +51,20 @@ export class SidebarService {
 
   constructor() {
     // Conditional Sidebar Items
-    if (this.features.classRegistrationEnabled) {
+    if (this.features.classRegistration.enabled) {
       this.mainItems.REGISTRATION = {
         data: {
-          label: 'Class Registration',
+          label: 'class_registration',
           icon: 'fas fa-clipboard-list h2',
           location: '/class-registration',
           action: "changeLocation('class-registration')",
         },
       };
     }
-    if (this.features.appointmentsEnabled) {
+    if (this.features.appointments.enabled) {
       this.mainItems.APPOINTMENT = {
         data: {
-          label: 'Appointment Planner',
+          label: 'appointment_planner',
           icon: 'fas fa-calendar-alt h2',
           location: '/scheduler',
           action: "changeLocation('scheduler')",

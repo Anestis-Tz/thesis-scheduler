@@ -1,4 +1,4 @@
-<div [ngSwitch]="view" class="calendar" *ngIf="features.appointmentsEnabled">
+<div [ngSwitch]="view" class="calendar" *ngIf="features.appointments.enabled">
   <mwl-calendar-month-view
     *ngSwitchCase="CalendarView.Month"
     [viewDate]="viewDate"
