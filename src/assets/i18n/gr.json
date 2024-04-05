@@ -4,10 +4,12 @@
 "gr" : "Ελληνικά", "change_lang": "Αλλαγή Γλώσσας", "app_title": "Κατανομητής Εργαστηρίων", "gen_email": "Email", "gen_password": "Κωδικός",
 "gen_login": "Σύνδεση", "gen_register": "Εγγραφή", "gen_required": "Υποχρεωτικό","gen_invalid_email": "Μη έγκυρο email",
 "gen_invalid_password": "Μη έγκυρος κωδικός", "gen_invalid_email_password": "Μη έγκυρο email ή κωδικός", "gen_email_exists": "Μη έγκυρο όνομα",
-"register_btn":"Κάνε εγγραφή τώρα", "register_msg":"Δεν είστε ακόμη χρήστης;","terms_title": "Όροι Χρήσης", "terms_msg":"Έχω διαβάσει & συμφωνώ με τους",
+"register_btn":"Κάνε εγγραφή τώρα", "register_msg":"Δεν είστε ακόμη χρήστης;","terms_title": "Όροι Χρήσης", "terms_msg":"Έχω διαβάσει & συμφωνώ με τους ",
 "register2_msg":"Εισαγάγετε το email σας και δημιουργήστε έναν κωδικό πρόσβασης για κάνετε εγγραφή", "change_password": "Αλλαγή Κωδικού", "gen_change" : "Change",
 "gen_select" : "Επιλογή", "username": "Όνομα", "settings": "Ρυθμίσεις", "profile": "Προφίλ", "logout": "Αποσύνδεση", "class_registration": "Εγγραφή Τάξης", "appointment_planner": "Κλείστε Ραντεβού",
 "greek": "Ελληνικά", "english": "Αγγλικά", "class_select": "Επιλογή Μαθήματος", "class": "Μάθημα", "next": "Επόμενο", "previous": "Προηγούμενο", 
 "class_time": "Επιλογή Τάξης", "lecture_time": "Ώρα Μαθήματος", "overview_confirm": "Επισκόπηση & Επιβεβαίωση",
 "your_selection": "Η Επιλογή Σας", "confirm_submit": "Επιβεβαίωση & Υποβολή", "modify_language": "Ρυθμίστε την γλώσσα που θέλετε να χρησιμοποιήσετε",
-"select_theme": "Επιλέξτε το θέμα που θέλετε να εμφανίζεται", "update_password": "Ενημερώστε τον κωδικό του λογαριασμού σας", "home": "Αρχική"}
+"select_theme": "Επιλέξτε το θέμα που θέλετε να εμφανίζεται", "update_password": "Ενημερώστε τον κωδικό του λογαριασμού σας", "home": "Αρχική", 
+"gen_passwords_do_not_match": "Οι κωδικοί δεν ταιριάζουν", "gen_password_too_short": "Ο κωδικός είναι πολύ μικρός", "gen_password_too_long": "Ο κωδικός είναι πολύ μεγάλος",
+"gen_password_invalid": "Ο κωδικός δεν είναι έγκυρος", "gen_check_confirm_password": "Επαλήθευση Κωδικού"}

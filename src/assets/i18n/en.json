@@ -5,10 +5,12 @@
 "gen_register": "Register", "gen_required": "Required", "gen_invalid_email": "Invalid Email", "gen_invalid_password": "Invalid Password",
 "gen_invalid_email_password": "Invalid Email or Password", "gen_email_exists": "Email Already Exists", "register_btn": "Register Now",
 "register_msg":"Not a User Yet?", "register2_msg": "Enter your email and create a password to register", "terms_title": "Terms and Conditions", 
-"terms_msg": "I have read and agree to the terms and conditions", "change_password": "Change Password", "gen_change" : "Change", "gen_select" : "Select",
+"terms_msg": "I have read and agree to the ", "change_password": "Change Password", "gen_change" : "Change", "gen_select" : "Select",
 "username": "Username",
 "settings": "Settings", "profile": "Profile", "logout": "Logout", "class_registration": "Class Registration", "appointment_planner": "Book an Appointment",
 "greek": "Greek", "english": "English", "class_select": "Select a Class", "class": "Class", "next": "Next", "previous": "Previous", 
 "class_time": "Select a Lecture", "lecture_time": "Lecture Time", "overview_confirm": "Overview and Submit",
 "your_selection": "Your Selections", "confirm_submit": "Confirm and Submit", "modify_language": "Modify the language you want to use",
-"select_theme": "Select the app theme you want to be displayed", "update_password": "Update your account password", "home": "Home"}
+"select_theme": "Select the app theme you want to be displayed", "update_password": "Update your account password", "home": "Home",
+"gen_passwords_do_not_match": "Passwords do not match", "gen_password_too_short": "Password too short", "gen_password_too_long": "Password too long",
+"gen_password_invalid": "Password invalid", "gen_check_confirm_password": "Confirm Password"}

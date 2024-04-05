@@ -19,7 +19,6 @@
                         <mat-error *ngIf="">{{'error_required_error' | translate}}</mat-error>
                     </mat-form-field>
 
-
                     <button class="button" (click)="login()" [disabled]="loginGroup.status == 'INVALID'">
                         <i class="pr-1 fa fa-sign-in-alt"></i>
                         {{'gen_login' | translate}}
