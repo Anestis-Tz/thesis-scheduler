@@ -16,7 +16,7 @@ export class SettingsComponent implements OnInit{
 
   //Used for testing //to be removed
   ngOnInit(): void {
-    this.usersService.getUsers();
+    // this.usersService.getUsers();
   }
 
   changeLanguageDialog() {

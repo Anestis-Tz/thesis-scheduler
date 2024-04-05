@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-class-registration',
   templateUrl: './class-registration.component.html',
-  styleUrls: ['./class-registration.component.css'],
+  styleUrls: ['./class-registration.component.less'],
 })
 export class ClassRegistrationComponent implements OnInit {
   firstFormGroup : FormGroup = new FormGroup({});

@@ -1,10 +1,19 @@
 const express = require("express");
-
 const app = express();
-
+const mongoose = require('mongoose');
 const BodyParser = require('body-parser');
 
 const User = require('./models/user');
+
+const userRoutes = require('./routes/user');
+
+mongoose.connect('mongodb+srv://admin:6TDW75ZiCj5TGULB@backenddb.9poodmf.mongodb.net/Thesis-API?retryWrites=true&w=majority&appName=BackendDB')
+    .then(() => {
+        console.log("Connected to MongoDB");
+    })
+    .catch(() => {
+        console.log("Connection failed");
+    });
 
 app.use(BodyParser.urlencoded({ extended: false }));
 app.use(BodyParser.json());
@@ -38,5 +47,7 @@ app.use('/api/users', (req, res, next) => {
     ]
     res.status(200).json({ message: 'Users fetched successfully', users: users });
 });
+
+app.use('/api/user', userRoutes);
 
 module.exports = app;

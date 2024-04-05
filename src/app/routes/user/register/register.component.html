@@ -9,13 +9,15 @@
                 <h3 class="text-center register2-msg">{{ 'register2_msg' | translate }}</h3>
                 
                 <mat-form-field class="form-element" appearance="fill">
+                    <mat-label>{{ 'username' | translate }}</mat-label>
+                    <input type="'text'" matInput placeholder="{{'username' | translate}}" formControlName="username">
+                    <mat-error *ngIf="">{{'error_required_error' | translate}}</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="form-element" appearance="fill">
                     <mat-label>{{ 'gen_email' | translate }}</mat-label>
                     <input type="'email'" matInput placeholder="{{'gen_email' | translate}}" formControlName="email">
-                    <!-- Errors -->
-                    <!-- <mat-error *ngIf="registerGroup.controls.email.errors?.required">{{ 'error_required_error' |
-                        translate }}</mat-error>
-                    <mat-error *ngIf="registerGroup.controls.email.errors?.pattern">{{ 'error_email_invalid' |
-                        translate }}</mat-error> -->
+                    <mat-error *ngIf="">{{'error_required_error' | translate}}</mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="form-element" appearance="fill">
@@ -23,33 +25,23 @@
                     <input [type]="hide ? 'password' : 'text'" matInput
                         placeholder="{{'gen_password' | translate}}" formControlName="password">
                     <mat-icon matSuffix (click)="hide = !hide">{{ hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-
-                    <!-- Errors -->
-                    <!-- <mat-error *ngIf="registerGroup.controls.password.errors?.required">{{ 'error_required_error'
-                        | translate }}</mat-error>
-                    <mat-error *ngIf="registerGroup.controls.password.errors?.pattern">{{ 'error_password_regex'
-                        | translate }}</mat-error> -->
+                    <mat-error *ngIf="">{{'error_required_error' | translate}}</mat-error>
                 </mat-form-field>
 
-                <mat-form-field class="form-element" appearance="fill">
+                <!-- <mat-form-field class="form-element" appearance="fill">
                     <mat-label>Confirm Password</mat-label>
                     <input [type]="hide ? 'password' : 'text'" matInput
                         placeholder="{{'gen_password' | translate}}" formControlName="password">
                     <mat-icon matSuffix (click)="hide = !hide">{{ hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <mat-error *ngIf="">{{'error_required_error' | translate}}</mat-error>
+                </mat-form-field> -->
 
-                    <!-- Errors -->
-                    <!-- <mat-error *ngIf="registerGroup.controls.password.errors?.required">{{ 'error_required_error'
-                        | translate }}</mat-error>
-                    <mat-error *ngIf="registerGroup.controls.password.errors?.pattern">{{ 'error_password_regex'
-                        | translate }}</mat-error> -->
-                </mat-form-field>
-
-                <section class="form-element">
+                <!-- <section class="form-element">
                     <mat-checkbox formControlName="privacy">
                         <span class="terms-msg"> {{ 'terms_msg' | translate }} </span>
                         <a href="/terms">{{ 'terms_title' | translate }}</a>
                     </mat-checkbox>
-                </section>
+                </section> -->
 
                 <button class="button" (click)="register()">
                     <i class="pr-1 fa fa-sign-in-alt"></i>
