@@ -10,70 +10,14 @@
         </div>
     </div>
     <div class="row">
-        <!-- Card for Change Language -->
-        <div class="col-md-4 setting-card">
+        <!-- Settings Cards -->
+        <div class="col-md-4 setting-card" *ngFor="let item of settingsItems">
             <div class="card">
-                <i class="card-icon fa fa-language"></i>
+                <i [class]="item.icon"></i>
                 <div class="card-body">
-                    <h5 class="card-title">{{ "change_lang" | translate }}</h5>
-                    <p class="card-text">{{ "modify_language" | translate }}</p>
-                    <button class="card-button" (click)="changeLanguageDialog()">{{ "gen_select" | translate }}</button>
-                </div>
-            </div>
-        </div>
-        <!-- Card for Change Theme -->
-        <div class="col-md-4 setting-card">
-            <div class="card">
-                <i class="card-icon fa fa-paint-brush"></i>
-                <div class="card-body">
-                    <h5 class="card-title">{{ "change_theme" | translate }}</h5>
-                    <p class="card-text">{{ "select_theme" | translate }}</p>
-                    <button class="card-button">{{ "gen_select" | translate }}</button>
-                </div>
-            </div>
-        </div>
-        <!-- Card for Change Password -->
-        <div class="col-md-4 setting-card">
-            <div class="card">
-                <i class="card-icon fa fa-lock"></i>
-                <div class="card-body">
-                    <h5 class="card-title">{{ "change_password" | translate }}</h5>
-                    <p class="card-text">{{ "update_password" | translate }}</p>
-                    <button class="card-button">{{ "gen_select" | translate }}</button>
-                </div>
-            </div>
-        </div>
-        <!-- test  -->
-        <div class="col-md-4 setting-card">
-            <div class="card">
-                <i class="card-icon fa fa-lock"></i>
-                <div class="card-body">
-                    <h5 class="card-title">{{ "change_password" | translate }}</h5>
-                    <p class="card-text">Test</p>
-                    <button class="card-button">{{ "gen_select" | translate }}</button>
-                </div>
-            </div>
-        </div>
-        <!-- test  -->
-        <div class="col-md-4 setting-card">
-            <div class="card">
-                <i class="card-icon fa fa-lock"></i>
-                <div class="card-body">
-                    <h5 class="card-title">{{ "change_password" | translate }}</h5>
-                    <p class="card-text">Test</p>
-                    <button class="card-button">{{ "gen_select" | translate }}</button>
-                </div>
-            </div>
-        </div>
-        <!-- test  -->
-        <div class="col-md-4 setting-card">
-            <div class="card">
-                <i class="card-icon fa fa-lock"></i>
-                <div class="card-body">
-                    <h5 class="card-title">{{ "change_password" | translate }}</h5>
-                    <p class="card-text">Test</p>
-                    <button class="card-button">{{ "gen_select" | translate }}</button>
-                </div>
+                    <h5 class="card-title">{{ item.label | translate }}</h5>
+                    <p class="card-text">{{ item.description | translate }}</p>
+                    <button class="card-button" (click)="openDialog(item.action)">{{ "gen_select" | translate }}</button>
             </div>
         </div>
     </div>
