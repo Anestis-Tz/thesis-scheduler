@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { DialogService } from '../../services/dialog.service';
 import { LanguageService } from '../../services/language.service';
-import { UsersService } from '../../services/users.service';
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
@@ -10,7 +9,7 @@ import { UsersService } from '../../services/users.service';
 export class SettingsComponent {
   openSettings: boolean = false;
 
-  constructor(public dialogService: DialogService, public languageService: LanguageService, public usersService: UsersService) { }
+  constructor(public dialogService: DialogService, public languageService: LanguageService) { }
 
   changeLanguageDialog() {
     this.dialogService.openSettingsDialog({

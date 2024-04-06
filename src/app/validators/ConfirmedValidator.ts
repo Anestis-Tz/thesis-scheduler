@@ -1,7 +1,8 @@
 import { FormGroup } from "@angular/forms";
 
+/** Makes sure that two form input fields match */
 export function ConfirmedValidator(controlName: string, matchingControlName: string){
-    
+
     return (formGroup: FormGroup) => {
         const control = formGroup.controls[controlName];
         const matchingControl = formGroup.controls[matchingControlName];

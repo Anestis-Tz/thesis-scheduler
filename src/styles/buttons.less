@@ -1,0 +1,38 @@
+@import "theme/colors.less";
+
+.button {
+    position        : relative;
+    cursor          : pointer;
+    padding         : 1rem;
+    margin          : 0 1rem 1rem 0;
+    background-color: @buttonsBg;
+    color           : @buttonsText;
+    border          : 1px solid fade(@buttonsText, 50%);
+    min-width       : 125px;
+
+    &.bblg {
+        min-width   : 350px;
+        display     : block;
+        margin-left : auto;
+        margin-right: auto;
+    }
+
+    &:hover {
+        background-color: @themeColor;
+        color           : @buttonsTextHover;
+        border          : 1px solid @themeColor;
+    }
+
+    i {
+        padding-right: 1rem;
+    }
+
+    a {
+        color          : @buttonsText  !important;
+        text-decoration: none !important;
+
+        &:hover {
+            color: @buttonsTextHover;
+        }
+    }
+}

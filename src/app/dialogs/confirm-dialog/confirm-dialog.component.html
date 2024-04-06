@@ -1,0 +1,17 @@
+<h1 class="dialog-title">
+    <i class="fa fa-info-circle dialog-icon"></i> 
+    {{data.title | translate}}
+</h1>
+
+<p class="dialog-message">
+    {{data.message | translate}}
+</p>
+
+<div class="dialog-buttons">
+    <button class="button bblg confirm" (click)="confirm()">
+        {{data.confirm | translate}}
+    </button>
+    <button class="button bblg cancel" (click)="close()" *ngIf="data.cancel">
+        {{data.cancel | translate}}
+    </button>
+</div>

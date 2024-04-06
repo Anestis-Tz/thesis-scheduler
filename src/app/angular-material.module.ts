@@ -1,3 +1,5 @@
+/** Import this module to have access to all Angular Material components */
+
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
