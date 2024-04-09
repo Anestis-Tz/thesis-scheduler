@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthData, LoginData } from '../interfaces/auth-data.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,11 +24,8 @@ export class AuthService {
       });
   }
 
-  login(email: string, password: string) {
+  login(email: string, password: string): Observable<{ token: string }> {
     const loginData: LoginData = { email: email, password: password };
-    this.http.post<{ token: string }>("http://localhost:3000/api/user/login", loginData)
-      .subscribe(res => {
-        this.token = res.token;
-      });
+    return this.http.post<{ token: string }>("http://localhost:3000/api/user/login", loginData);
   }
 }

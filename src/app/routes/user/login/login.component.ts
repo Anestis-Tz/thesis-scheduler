@@ -10,6 +10,7 @@ import { AuthService } from '../../../services/auth.service';
 
 export class LoginComponent {
   loginGroup: FormGroup;
+  private token: string = '';
   hide: boolean = true;
   isLoading: boolean = false;
 
@@ -21,9 +22,21 @@ export class LoginComponent {
   }
 
   login() {
-    // if (!this.loginGroup.valid) {
-    //   return;
-    // }
-    this.authService.login(this.loginGroup.value.email, this.loginGroup.value.password);
+    if (this.loginGroup.valid) {
+      this.isLoading = true;
+      this.authService.login(this.loginGroup.value.email, this.loginGroup.value.password)
+        .subscribe({
+          next: (res) => {
+            this.token = res.token;
+            this.isLoading = false;
+            console.log(this.token);
+          },
+          error: (err) => {
+            this.isLoading = false;
+            console.error(err);
+          }
+        });
+    }
   }
+  
 }
