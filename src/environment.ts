@@ -4,7 +4,7 @@ export const environment = {
     appVersion: "v0.0.1",
     features: {
         appointments: {
-            enabled: true,
+            enabled: false,
         },
         classRegistration: {
             enabled: true,

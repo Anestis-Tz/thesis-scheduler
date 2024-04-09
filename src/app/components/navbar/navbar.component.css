@@ -1,0 +1,64 @@
+.navbar-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #222831;
+  height: 5vh;
+}
+.navbar-container .mat-toolbar-row .sidebar-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-container .mat-toolbar-row .sidebar-button:hover .hamburger-icon > .hamburger-line {
+  background: rgba(255, 255, 255, 0.1);
+}
+.navbar-container .mat-toolbar-row .sidebar-button .hamburger-icon {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
+.navbar-container .mat-toolbar-row .sidebar-button .hamburger-icon .hamburger-line {
+  background: #fff;
+  height: 3px;
+  /* Adjust to change the thickness of the lines */
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.navbar-container .mat-toolbar-row .sidebar-button .hamburger-icon .hamburger-line:nth-child(1) {
+  top: 0;
+}
+.navbar-container .mat-toolbar-row .sidebar-button .hamburger-icon .hamburger-line:nth-child(2) {
+  top: 8px;
+}
+.navbar-container .mat-toolbar-row .sidebar-button .hamburger-icon .hamburger-line:nth-child(3) {
+  top: 16px;
+}
+.navbar-container .mat-toolbar-row .nav-settings-btn {
+  color: white;
+}
+.navbar-container .mat-toolbar-row .nav-settings-btn:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+}
+.navbar-container .mat-toolbar-row .app_title {
+  font-size: 1.3vw;
+  text-decoration: none;
+  color: white;
+  padding-left: 0%;
+}
+.navbar-container .mat-toolbar-row .app_title:hover {
+  cursor: pointer;
+}
