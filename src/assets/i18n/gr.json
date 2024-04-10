@@ -12,4 +12,5 @@
 "your_selection": "Η Επιλογή Σας", "confirm_submit": "Επιβεβαίωση & Υποβολή", "modify_language": "Ρυθμίστε την γλώσσα που θέλετε να χρησιμοποιήσετε",
 "select_theme": "Επιλέξτε το θέμα που θέλετε να εμφανίζεται", "update_password": "Ενημερώστε τον κωδικό του λογαριασμού σας", "home": "Αρχική", 
 "gen_passwords_do_not_match": "Οι κωδικοί δεν ταιριάζουν", "gen_password_too_short": "Ο κωδικός είναι πολύ μικρός", "gen_password_too_long": "Ο κωδικός είναι πολύ μεγάλος",
-"gen_password_invalid": "Ο κωδικός δεν είναι έγκυρος", "gen_check_confirm_password": "Επαλήθευση Κωδικού"}
+"gen_password_invalid": "Ο κωδικός δεν είναι έγκυρος", "gen_check_confirm_password": "Επαλήθευση Κωδικού", "field_required": "Απαραίτητο πεδίο", "new_password": "Νέος Κωδικός",
+"current_password": "Τωρινός Κωδικός"}

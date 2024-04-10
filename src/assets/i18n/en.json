@@ -13,4 +13,5 @@
 "your_selection": "Your Selections", "confirm_submit": "Confirm and Submit", "modify_language": "Modify the language you want to use",
 "select_theme": "Select the app theme you want to be displayed", "update_password": "Update your account password", "home": "Home",
 "gen_passwords_do_not_match": "Passwords do not match", "gen_password_too_short": "Password too short", "gen_password_too_long": "Password too long",
-"gen_password_invalid": "Password invalid", "gen_check_confirm_password": "Confirm Password"}
+"gen_password_invalid": "Password invalid", "gen_check_confirm_password": "Confirm Password", "field_required": "Field Required", "new_password": "New Password",
+"current_password": "Current Password"}

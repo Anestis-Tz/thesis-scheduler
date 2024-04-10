@@ -41,7 +41,16 @@ export class SettingsComponent {
   }
 
   changePasswordDialog() {
-    // To be implemented
+    this.dialogService.openChangePasswordDialog({
+      icon: 'key',
+      title: 'Change Password',
+      confirm: "Save",
+      cancel: "Cancel"
+    }).subscribe(res => {
+      if (res) {
+        // To be implemented
+      }
+    })
   }
 
   openDialog(action: string) {
