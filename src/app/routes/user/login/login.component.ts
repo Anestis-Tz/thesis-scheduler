@@ -23,19 +23,7 @@ export class LoginComponent {
 
   login() {
     if (this.loginGroup.valid) {
-      this.isLoading = true;
-      this.authService.login(this.loginGroup.value.email, this.loginGroup.value.password)
-        .subscribe({
-          next: (res) => {
-            this.token = res.token;
-            this.isLoading = false;
-            console.log(this.token);
-          },
-          error: (err) => {
-            this.isLoading = false;
-            console.error(err);
-          }
-        });
+      this.authService.login(this.loginGroup.value.email, this.loginGroup.value.password);
     }
   }
   

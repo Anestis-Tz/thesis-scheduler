@@ -12,6 +12,7 @@ export class SidebarService {
 
   mainItems: any = {
     HOME: {
+      needsLogin: false,
       data: {
         label: 'home',
         icon: 'fas fa-home h2',
@@ -20,6 +21,7 @@ export class SidebarService {
       },
     },
     SETTINGS: {
+      needsLogin: true,
       data: {
         label: 'settings',
         icon: 'fas fa-cog h2',
@@ -28,6 +30,7 @@ export class SidebarService {
       },
     },
     PROFILE: {
+      needsLogin: true,
       data: {
         label: 'profile',
         icon: 'fas fa-user-circle h2',
@@ -40,6 +43,7 @@ export class SidebarService {
   // Not working for now, needs fixing
   mainBottomItems: any = {
     LOGOUT: {
+      needsLogin: true,
       data: {
         label: 'logout',
         icon: 'fas fa-sign-out-alt h2',
@@ -53,6 +57,7 @@ export class SidebarService {
     // Conditional Sidebar Items
     if (this.features.classRegistration.enabled) {
       this.mainItems.REGISTRATION = {
+        needsLogin: true,
         data: {
           label: 'class_registration',
           icon: 'fas fa-clipboard-list h2',
@@ -63,6 +68,7 @@ export class SidebarService {
     }
     if (this.features.appointments.enabled) {
       this.mainItems.APPOINTMENT = {
+        needsLogin: true,
         data: {
           label: 'appointment_planner',
           icon: 'fas fa-calendar-alt h2',
@@ -73,18 +79,24 @@ export class SidebarService {
     }
   }
 
-  getMainSidebarItems() {
+  getMainSidebarItems(data: boolean) {
     let items = [];
     for (let item in this.mainItems) {
-      items.push(this.mainItems[item].data);
+      if (this.mainItems[item].needsLogin === true) {
+        if (data === true) {
+          items.push(this.mainItems[item].data);
+        } else items.push(this.mainItems[item].data);
+      }
     }
     return items;
   }
 
-  getBottomSidebarItems() {
+  getBottomSidebarItems(data: boolean) {
     let bottomItems = [];
     for (let bottomItem in this.mainBottomItems) {
-      bottomItems.push(this.mainBottomItems[bottomItem].data);
+      if (this.mainBottomItems[bottomItem].needsLogin === data) {
+        bottomItems.push(this.mainBottomItems[bottomItem].data);
+      }
     }
     return bottomItems;
   }
