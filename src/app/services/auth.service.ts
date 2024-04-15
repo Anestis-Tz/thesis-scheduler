@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthData, LoginData } from '../interfaces/auth-data.model';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   private token: string = '';
-  private authStatusListener = new Subject<boolean>();
+  private authStatusListener = new BehaviorSubject<boolean>(false);
   constructor(private http: HttpClient) { }
 
   getToken() {
     return this.token;
   }
 
-  getAuthStatusListener() {
+  getAuthStatusListener(): Observable<boolean> {
     return this.authStatusListener.asObservable();
   }
 

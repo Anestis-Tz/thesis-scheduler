@@ -93,10 +93,13 @@ export class SidebarService {
   }
 
   getBottomSidebarItems(data: boolean) {
+    console.log('this is the data', data);
     let bottomItems = [];
     for (let bottomItem in this.mainBottomItems) {
       if (this.mainBottomItems[bottomItem].needsLogin === data) {
-        bottomItems.push(this.mainBottomItems[bottomItem].data);
+        if (data === true) {
+          bottomItems.push(this.mainBottomItems[bottomItem].data);
+        } else bottomItems.push(this.mainBottomItems[bottomItem].data);
       }
     }
     return bottomItems;

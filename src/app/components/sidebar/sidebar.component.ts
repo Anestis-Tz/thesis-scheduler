@@ -1,7 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SidebarService } from '../../services/sidebar.service';
-import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
 import { environment } from '../../../environment';
 import { AuthService } from '../../services/auth.service';
 import { Subscription } from 'rxjs';
@@ -14,13 +12,13 @@ import { Subscription } from 'rxjs';
 
 export class SidebarComponent implements OnInit, OnDestroy {
   userIsAuthenticated: boolean = false;
-  private authListenerSubs!: Subscription;
+  private authListenerSubs: Subscription = new Subscription();
   isOpen = false;
   features = environment.features;
-  items: any
-  bottomItems: any
+  items: any;
+  bottomItems: any;
 
-  constructor(private sidebarService: SidebarService, private router: Router, private authService: AuthService) {
+  constructor(private sidebarService: SidebarService, private authService: AuthService) {
     this.sidebarService.getState().subscribe(isOpen => {
       this.isOpen = isOpen;
     });
@@ -28,9 +26,9 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.authListenerSubs = this.authService.getAuthStatusListener().subscribe(isAuthenticated => {
-      console.log(isAuthenticated)
+      console.log('imhere');
       this.userIsAuthenticated = isAuthenticated;
-
+      console.log("User Authenticated: ", isAuthenticated)
     });
     // Get main sidebar items
     this.items = this.sidebarService.getMainSidebarItems(this.userIsAuthenticated);
