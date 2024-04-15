@@ -2,17 +2,18 @@ const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
 const BodyParser = require('body-parser');
+require('dotenv').config();
 
 const User = require('./models/user');
 
 const userRoutes = require('./routes/user');
 
-mongoose.connect('mongodb+srv://admin:6TDW75ZiCj5TGULB@backenddb.9poodmf.mongodb.net/Thesis-API?retryWrites=true&w=majority&appName=BackendDB')
+mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log("Connected to MongoDB");
     })
-    .catch(() => {
-        console.log("Connection failed");
+    .catch((err) => {
+        console.log("Connection failed", err.message);
     });
 
 app.use(BodyParser.urlencoded({ extended: false }));

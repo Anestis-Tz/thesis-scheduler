@@ -80,6 +80,7 @@ export class SidebarService {
   }
 
   getMainSidebarItems(data: boolean) {
+    console.log(data);
     let items = [];
     for (let item in this.mainItems) {
       if (this.mainItems[item].needsLogin === true) {
