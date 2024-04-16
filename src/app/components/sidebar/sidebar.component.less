@@ -11,23 +11,21 @@
 }
 
 .item-style {
-  position     : absolute;
   display      : inline;
-  width        : 200px;
   white-space  : nowrap;
   overflow     : hidden !important;
   text-overflow: ellipsis;
   font-size    : 1rem;
-  left         : 25%;
   padding-top  : 3px;
   align-items  : center;
 }
 
 i {
-  font-size   : 1.5rem;
+  font-size   : 1.4rem;
   align-items : center;
-  padding-left: 10%;
+  margin-left: 10%;
   color       : #EEEEEE;
+  width:2vw;
 }
 
 .sidebar.open {
@@ -51,13 +49,13 @@ i {
 }
 
 .sidebar-items {
-  padding-top    : 10px;
+  padding-top    : 20px;
   display        : flex;
   justify-content: start;
-  height         : 70px;
+  height         : 60px;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #0071aa;
     cursor          : pointer;
     transition      : 0.2s;
   }
@@ -66,19 +64,17 @@ i {
 .sidebar-bottom-items {
   position         : absolute;
   width            : 100%;
-  // padding-bottom: 15px;
   color            : #EEEEEE;
   bottom           : 2.5%;
   align-items      : center;
   padding-top      : 10px;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #0071aa;
     cursor          : pointer;
     transition      : 0.2s;
   }
 }
-
 
 .sidebar-overlay {
   width   : 100vw;

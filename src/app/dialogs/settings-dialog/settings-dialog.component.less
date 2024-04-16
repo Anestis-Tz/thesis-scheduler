@@ -1,10 +1,17 @@
 .dialog-container {
+  width: 20vw;
+  padding: 20px;
+  padding-top: 10px!important;
   background   : white;
-  padding      : 45px;
   border-radius: 8px;
-  box-shadow   : 0 2px 10px rgba(0, 0, 0, 0.1);
-  width        : fit-content;
+  box-shadow   : 0 5px 10px rgba(0, 0, 0, 0.1);
   margin       : auto;
+  height: 33vh;
+}
+
+.dialog-content {
+  width: 100%;
+  line-height: 2;
 }
 
 .dialog-title {
@@ -34,4 +41,39 @@
 
 .btn:active {
   transform: scale(0.98);
+}
+
+.confirm {
+  background-color: #0071aa;
+  color: #EEEEEE;
+
+  &:hover {
+    background-color: #005c8b;
+    color: #EEEEEE;
+  }
+} 
+
+.cancel {
+  background-color: #a01616;
+  color: #EEEEEE;
+
+  &:hover {
+    background-color: #8c1212;
+    color: #EEEEEE;
+  }
+}
+
+.form-select:hover, .form-select:focus {
+  border-color : #0071aa; /* Highlight border on hover/focus */
+  outline      : none; /* Remove focus outline and use border color change instead */
+}
+
+/* Additional focus styling can be added if needed */
+.form-select:focus {
+  box-shadow: 0 0 5px rgba(0, 113, 170, 0.5); /* Soft box shadow on focus */
+}
+
+.icon {
+  font-size   : 2rem;
+  color       : #0071aa!important;
 }

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 /** Components */
 // import { CalendarComponent } from './routes/calendar/calendar.component';
+import { HomeComponent } from './routes/home/home.component';
 import { SettingsComponent } from './routes/settings/settings.component';
 import { LoginComponent } from './routes/user/login/login.component';
 import { RegisterComponent } from './routes/user/register/register.component';
@@ -16,6 +17,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'terms', component: TermsComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent },
   // { path: 'scheduler', component: CalendarComponent },
   { path: 'class-registration', component: ClassRegistrationComponent },
   { path: '404', component: Page404Component }

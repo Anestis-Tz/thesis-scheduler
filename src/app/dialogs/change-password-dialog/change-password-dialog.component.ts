@@ -10,6 +10,9 @@ import { ConfirmedValidator } from '../../validators/ConfirmedValidator';
 })
 export class ChangePasswordDialogComponent {
   passwordForm: FormGroup;
+  hideCurrentPassword = true;
+  hidePassword = true;
+  hideConfirmPassword = true;
 
   constructor(
     private fb: FormBuilder,
@@ -30,8 +33,8 @@ export class ChangePasswordDialogComponent {
 
   changePassword() {
     if (this.passwordForm.valid) {
-      // Implement your password change logic here
-      this.close();
+      // Implement password change logic
+      this.dialogRef.close();
     }
   }
 }

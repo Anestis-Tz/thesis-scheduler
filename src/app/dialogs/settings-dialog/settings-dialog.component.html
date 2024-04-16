@@ -1,20 +1,24 @@
 <div class="dialog-container">
-  <h1 class="dialog-title">
-    {{ "change_lang" | translate }}
-  </h1>
-
-  <select class="form-select" (change)="ChangeLang($event)">
-    <option [selected]="selectedLanguage === 'en'" value="en">{{ "english" | translate }}</option>
-    <option [selected]="selectedLanguage === 'gr'" value="gr">{{ "greek" | translate }}</option>
-  </select>
-
-  <!-- Buttons -->
-  <div class="dialog-buttons">
-    <button class="btn confirm" (click)="confirm()">
-      {{ "gen_confirm" | translate }}
-    </button>
-    <button class="btn cancel" (click)="close()" *ngIf="data.cancel">
-      {{ "gen_cancel" | translate }}
-    </button>
+  <div class="dialog-content">
+    <i class="icon fa fa-language"></i>
+    <h1 class="dialog-title">
+      {{ "change_lang" | translate }}
+    </h1>
+    <p class="card-text">{{ "modify_language" | translate }}</p>
+  
+    <select class="form-select" (change)="ChangeLang($event)">
+      <option [selected]="selectedLanguage === 'en'" value="en">{{ "english" | translate }}</option>
+      <option [selected]="selectedLanguage === 'gr'" value="gr">{{ "greek" | translate }}</option>
+    </select>
+  
+    <!-- Buttons -->
+    <div class="dialog-buttons">
+      <button class="btn confirm" (click)="confirm()">
+        {{ "gen_confirm" | translate }}
+      </button>
+      <button class="btn cancel" (click)="close()" *ngIf="data.cancel">
+        {{ "gen_cancel" | translate }}
+      </button>
+    </div>
   </div>
 </div>
