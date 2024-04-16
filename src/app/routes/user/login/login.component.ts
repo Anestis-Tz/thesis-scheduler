@@ -12,7 +12,7 @@ import { UserService } from '../../../services/user.service';
 export class LoginComponent {
   loginGroup: FormGroup;
   private token: string = '';
-  hide: boolean = true;
+  hidePassword = true;
   isLoading: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private userService: UserService) {

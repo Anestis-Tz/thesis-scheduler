@@ -26,6 +26,8 @@ import { LoginComponent } from './routes/user/login/login.component';
 import { RegisterComponent } from './routes/user/register/register.component';
 import { TermsComponent } from './routes/terms/terms.component';
 import { ClassRegistrationComponent } from './routes/class-registration/class-registration.component';
+import { HomeComponent } from './routes/home/home.component';
+import { ProfileComponent } from './routes/profile/profile.component';
 // import { CalendarComponent } from './routes/calendar/calendar.component';
 
 @NgModule({
@@ -36,6 +38,8 @@ import { ClassRegistrationComponent } from './routes/class-registration/class-re
     RegisterComponent,
     TermsComponent,
     ClassRegistrationComponent,
+    HomeComponent,
+    ProfileComponent,
     // CalendarComponent,
   ],
   imports: [
