@@ -1,7 +1,7 @@
 <div>
   <!-- Nav Bar -->
   <app-navbar></app-navbar>
-  <app-sidebar></app-sidebar>
+  <app-sidebar *ngIf="features.sidebar.hasSidebar"></app-sidebar>
   
   <!-- Routed views -->
   <div class="main-view">

@@ -56,10 +56,6 @@
       }
     }
 
-    // .spacer {
-    //   flex: 1 1 auto;
-    // }
-
     .nav-settings-btn {
       color: white;
 
@@ -80,5 +76,32 @@
         cursor: pointer;
       }
     }
+
+    .navbar-items-container {
+      padding-left: 2.5%;
+
+      .navbar-items {
+        display        : flex;
+
+        i {
+          font-size   : 1.3vw;
+        }
+        
+        .h2 {
+          margin-bottom: 0;
+        }
+  
+        .item-style {
+          display      : inline;
+          white-space  : nowrap;
+          overflow     : hidden !important;
+          text-overflow: ellipsis;
+          font-size      : 1.3vw;
+          align-items  : center;
+        }
+  
+      }
+    }
+
   }
 }

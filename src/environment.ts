@@ -11,6 +11,8 @@ export const environment = {
             isRegistrationOpen: true,
         },
         sidebar: {
+            iconsEnabled: false,
+            hasSidebar: false,
             hasSidebarSimple: false
         },
         footer: {

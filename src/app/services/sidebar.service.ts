@@ -38,60 +38,6 @@ export class SidebarService {
         action: "changeLocation('profile')",
       },
     },
-    TEST: {
-      needsLogin: true,
-      data: {
-        label: 'Test',
-        icon: 'fas fa-user-circle h2',
-        location: '/test',
-        action: "changeLocation('test')",
-      },
-    },
-    TEST2: {
-      needsLogin: true,
-      data: {
-        label: 'Test',
-        icon: 'fas fa-user-circle h2',
-        location: '/test',
-        action: "changeLocation('test')",
-      },
-    },
-    TEST3: {
-      needsLogin: true,
-      data: {
-        label: 'Test',
-        icon: 'fas fa-user-circle h2',
-        location: '/test',
-        action: "changeLocation('test')",
-      },
-    },
-    TEST4: {
-      needsLogin: true,
-      data: {
-        label: 'Test',
-        icon: 'fas fa-user-circle h2',
-        location: '/test',
-        action: "changeLocation('test')",
-      },
-    },
-    TEST5: {
-      needsLogin: true,
-      data: {
-        label: 'Test',
-        icon: 'fas fa-user-circle h2',
-        location: '/test',
-        action: "changeLocation('test')",
-      },
-    },
-    TEST6: {
-      needsLogin: true,
-      data: {
-        label: 'Test',
-        icon: 'fas fa-user-circle h2',
-        location: '/test',
-        action: "changeLocation('test')",
-      },
-    },
   };
 
   // Not working for now, needs fixing
@@ -140,7 +86,9 @@ export class SidebarService {
       if (this.mainItems[item].needsLogin === true) {
         if (data === true) {
           items.push(this.mainItems[item].data);
-        } else items.push(this.mainItems[item].data);
+        } 
+      } else if (this.mainItems[item].needsLogin === false) {
+          items.push(this.mainItems[item].data);
       }
     }
     return items;
