@@ -1,0 +1,85 @@
+<mat-horizontal-stepper #stepper class="class-registration-container">
+    <!-- Step 1: Class Selection -->
+    <mat-step [completed]="selectedClass">
+      <ng-template matStepLabel class="step-label">
+        <mat-icon>class</mat-icon>
+        <span class="step-title">{{ "class_select" | translate }}</span>
+      </ng-template>
+  
+      <mat-card>
+        <mat-card-content>
+          <form [formGroup]="firstFormGroup">
+            <mat-grid-list cols="1" rowHeight="120px">
+              <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                  <mat-label>{{ "class" | translate }}</mat-label>
+                  <mat-select formControlName="firstCtrl" (selectionChange)="setAvailableLectures($event.value)">
+                    <mat-option *ngFor="let class of availableClasses" [value]="class.value">
+                      {{ class.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </mat-grid-tile>
+            </mat-grid-list>
+            <button mat-raised-button color="primary" matStepperNext class="next-button">
+              {{ "next" | translate }} <mat-icon>arrow_forward</mat-icon>
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </mat-step>
+  
+    <!-- Step 2: Lecture Time Selection -->
+    <mat-step [completed]="selectedLecture">
+      <ng-template matStepLabel class="step-label">
+        <mat-icon>access_time</mat-icon>
+        <span class="step-title">{{ "class_time" | translate }}</span>
+      </ng-template>
+      <mat-card>
+        <mat-card-content>
+          <form [formGroup]="secondFormGroup">
+            <mat-grid-list cols="1" rowHeight="120px">
+              <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                  <mat-label>{{ "lecture_time" | translate }}</mat-label>
+                  <mat-select formControlName="secondCtrl" (selectionChange)="selectedLecture = $event.value">
+                    <mat-option *ngFor="let lecture of availableLectures" [value]="lecture.value">
+                      {{ lecture.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </mat-grid-tile>
+            </mat-grid-list>
+            <button mat-raised-buttoncolor="primary" matStepperNext class="next-button">
+              {{ "next" | translate }}
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </mat-step>
+  
+    <!-- Step 3: Overview and Submission -->
+    <mat-step>
+      <ng-template matStepLabel class="step-label">
+        <mat-icon>check_circle_outline</mat-icon>
+        <span class="step-title">{{ "overview_confirm" | translate }}</span>
+      </ng-template>
+      <mat-card>
+        <mat-card-content class="overview-content">
+          <h3>{{ "your_selection" | translate }}:</h3>
+          <p>
+            <strong>{{ "class" | translate }}:</strong>
+            {{ getSelectedClassViewValue() }}
+          </p>
+          <p>
+            <strong>{{ "lecture_time" | translate }}:</strong>
+            {{ getSelectedLectureViewValue() }}
+          </p>
+          <button mat-raised-button color="accent" (click)="submit()" class="confirm-button">
+            {{ "confirm_submit" | translate }} <mat-icon>check</mat-icon>
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </mat-step>
+  </mat-horizontal-stepper>
