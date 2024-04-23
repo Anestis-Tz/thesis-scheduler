@@ -1,69 +1,59 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
+import { ClassRegistrationService } from '../../services/class-registration.service';
+import { Class, Lecture } from '../../interfaces/class';
 @Component({
   selector: 'app-class-registration',
   templateUrl: './class-registration.component.html',
   styleUrls: ['./class-registration.component.less'],
 })
 export class ClassRegistrationComponent implements OnInit {
-  firstFormGroup : FormGroup = new FormGroup({});
-  secondFormGroup: FormGroup = new FormGroup({});
-  selectedClass  : string = '';
-  selectedLecture: string = '';
+  classes: Class[] = [];
+  availableLectures: Lecture[] = [];
+  classFormGroup: FormGroup;
+  lectureFormGroup: FormGroup;
 
-  availableClasses = [
-    { value: 'robotics',  viewValue: 'Robotics' },
-    { value: 'coding'  ,  viewValue: 'Coding'   },
-    { value: 'math'    ,  viewValue: 'Math'     },
-    { value: 'science' ,  viewValue: 'Science'  },
-    { value: 'english' ,  viewValue: 'English'  },
-    { value: 'history' ,  viewValue: 'History'  },
-    { value: 'art'     ,  viewValue: 'Art'      }
-  ];
-
-  availableLectures: any[] = []; // Initialize the property with an empty array
-
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder, 
+    private classRegistrationService: ClassRegistrationService
+  ) {}
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: [''],
+    this.classes = this.classRegistrationService.getClasses();
+    this.initForms();
+  }
+
+  initForms() {
+    this.classFormGroup = this.formBuilder.group({
+      classControl: ['']
     });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: [''],
+
+    this.lectureFormGroup = this.formBuilder.group({
+      lectureControl: ['']
+    });
+
+    this.classFormGroup.get('classControl')?.valueChanges.subscribe(classValue => {
+      this.setAvailableLectures(classValue);
+      this.lectureFormGroup.reset();  // Reset lecture form when class changes
     });
   }
 
-  setAvailableLectures(classValue: string) {
-    this.selectedClass = classValue;
-    // if (classValue === 'robotics') {
-      this.availableLectures = [
-        { value: 'wed-12', viewValue: 'Wednesday 12-2' },
-        { value: 'wed-2', viewValue: 'Wednesday 2-4' },
-        { value: 'wed-4', viewValue: 'Wednesday 4-6' },
-      ];
-    // }
-    // Add more conditions for other classes if necessary
+  setAvailableLectures(classValue: any) {
+    this.availableLectures = (this.classes[classValue] as any)?.lectures || [];
   }
 
   getSelectedClassViewValue(): string {
-    return (
-      this.availableClasses.find((c) => c.value === this.selectedClass)
-        ?.viewValue || ''
-    );
+    return (this.classes.find((c: any) => c.value === this.classFormGroup.get('classControl')?.value) as any)?.viewValue || '';
   }
 
   getSelectedLectureViewValue(): string {
-    return (
-      this.availableLectures.find((l) => l.value === this.selectedLecture)
-        ?.viewValue || ''
-    );
+    return (this.availableLectures.find((l: any) => l.value === this.lectureFormGroup.get('lectureControl')?.value) as any)?.viewValue || '';
   }
 
   submit() {
-    this.selectedLecture = this.secondFormGroup.get('secondCtrl')?.value;
-    console.log('Selected Class:', this.selectedClass);
-    console.log('Selected Lecture:', this.selectedLecture);
+    const selectedClass = this.classFormGroup.get('classControl')?.value;
+    const selectedLecture = this.lectureFormGroup.get('lectureControl')?.value;
+    console.log('Selected Class:', selectedClass);
+    console.log('Selected Lecture:', selectedLecture);
   }
 }

@@ -1,52 +1,52 @@
-.class-registration-container {
-    padding-top: 10%;
-    width: 40%;
-    margin: 0 auto;
-}
+/* class-registration.component.less */
 
-mat-card {
-    margin-bottom: 15px;
-}
-
-.next-button {
-    width: 34%;
-    margin-top: 15px;
-    margin-left: 33%;
-}
-
-mat-grid-list {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-mat-horizontal-stepper {
-    margin: 20px 0;
-}
-
-mat-icon {
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-.overview-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.overview-content h3 {
+:host {
+    display: block;
+    padding: 20px;
+  }
+  
+  .stepper-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.1);
+    padding: 30px;
+  }
+  
+  .form-field-container {
     margin-bottom: 20px;
-}
-
-// Disable text selection for a better experience
-* {
-    -webkit-user-select: none;
-    /* Chrome, Safari, Opera */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-    /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
-}
+  }
+  
+  .step-label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .mat-horizontal-stepper-header {
+    display: none; /* Hide default stepper header */
+  }
+  
+  /* You might want to style the mat-form-field with a custom class if you need specific styles */
+  .custom-mat-form-field {
+    width: 100%;
+  }
+  
+  /* Styling for buttons, adjust colors and sizes as per your design requirements */
+  button.mat-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    min-width: 100px;
+  }
+  
+  /* Overview step */
+  .overview-container h2 {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  
