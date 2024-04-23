@@ -30,20 +30,17 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
     this.authListenerSubs = this.authService.getAuthStatusListener().subscribe(isAuthenticated => {
       this.userIsAuthenticated = isAuthenticated;
-      console.log("User Authenticated Status: ", isAuthenticated)
     });
     
     // Get main sidebar items
-    this.items = this.sidebarService.getMainSidebarItems(this.userIsAuthenticated);
+    this.items = this.sidebarService.getMainSidebarItems();
     // Get bottom sidebar items
-    this.bottomItems = this.sidebarService.getBottomSidebarItems(this.userIsAuthenticated);
+    this.bottomItems = this.sidebarService.getBottomSidebarItems();
   }
 
   ngOnDestroy() {
     this.authListenerSubs.unsubscribe();
   }
-
-  isLoginRoute: boolean = false;
 
   toggleSidebar() {
     this.sidebarService.toggle();

@@ -26,8 +26,8 @@ export class NavbarComponent implements OnInit{
     this.authListenerSubs = this.authService.getAuthStatusListener().subscribe(isAuthenticated => {
       this.userIsAuthenticated = isAuthenticated;
     });
-    this.items = this.sidebarService.getMainSidebarItems(this.userIsAuthenticated);
-    this.bottomItems = this.sidebarService.getBottomSidebarItems(this.userIsAuthenticated);
+    this.items = this.sidebarService.getMainSidebarItems();
+    this.bottomItems = this.sidebarService.getBottomSidebarItems();
   }
 
   toggleSidebar() {

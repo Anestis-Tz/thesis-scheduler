@@ -79,33 +79,17 @@ export class SidebarService {
     }
   }
 
-  getMainSidebarItems(data: boolean) {
-    console.log(data);
-    let items = [];
-    for (let item in this.mainItems) {
-      if (this.mainItems[item].needsLogin === true) {
-        if (data === true) {
-          items.push(this.mainItems[item].data);
-        } 
-      } else if (this.mainItems[item].needsLogin === false) {
-          items.push(this.mainItems[item].data);
-      }
+  getMainSidebarItems() {
+    let items = []
+    for (let item in this.mainItems) items.push(this.mainItems[item].data);
+      return items;
     }
-    return items;
-  }
 
-  getBottomSidebarItems(data: boolean) {
-    console.log('this is the data', data);
+  getBottomSidebarItems() {
     let bottomItems = [];
-    for (let bottomItem in this.mainBottomItems) {
-      if (this.mainBottomItems[bottomItem].needsLogin === data) {
-        if (data === true) {
-          bottomItems.push(this.mainBottomItems[bottomItem].data);
-        } else bottomItems.push(this.mainBottomItems[bottomItem].data);
-      }
+    for (let bottomItem in this.mainBottomItems) bottomItems.push(this.mainBottomItems[bottomItem].data);
+      return bottomItems;
     }
-    return bottomItems;
-  }
 
   toggle() {
     this.sidebarState.next(!this.sidebarState.value);

@@ -5,11 +5,13 @@
   right           : 0;
   z-index         : 10;
   background-color: rgb(34, 40, 49);
-  height: 5vh;
+  height          : 5vh;
 
   .mat-toolbar-row {
-    // Uncomment this to make the navbar go right
-    // justify-content: space-between;
+    display    : flex;
+    align-items: center;
+    height     : 100%;
+    padding    : 0 10px;
 
     .sidebar-button {
       background     : none;
@@ -34,7 +36,6 @@
         .hamburger-line {
           background   : #fff;
           height       : 3px;
-          /* Adjust to change the thickness of the lines */
           position     : absolute;
           left         : 0;
           width        : 100%;
@@ -78,30 +79,39 @@
     }
 
     .navbar-items-container {
-      padding-left: 2.5%;
+      margin-left    : 5%;
+      display        : flex;
+      align-items    : center;
+      height         : 100%;
+      flex-grow      : 1;
+      justify-content: flex-start;
 
       .navbar-items {
-        display        : flex;
+        display    : flex;
+        align-items: center;
+        padding    : 0 15px;
+        height     : 100%;
+        transition : background-color 0.3s;
+
+        &:hover {
+          background-color: #0071aa;
+          color           : #FFFFFF;
+          cursor          : pointer;
+        }
 
         i {
           font-size   : 1.3vw;
+          margin-right: 10px;
         }
-        
-        .h2 {
-          margin-bottom: 0;
-        }
-  
+
         .item-style {
-          display      : inline;
+          display      : block;
           white-space  : nowrap;
-          overflow     : hidden !important;
+          overflow     : hidden;
           text-overflow: ellipsis;
-          font-size      : 1.3vw;
-          align-items  : center;
+          font-size    : 1.3vw;
         }
-  
       }
     }
-
   }
 }

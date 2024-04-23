@@ -16,7 +16,7 @@
 
     <div class="navbar-items-container">
       <div class="navbar-items" *ngFor="let item of items" (click)="changeLocation(item.location)">
-        <i style="padding-right: 10px;" [ngClass]="item.icon"></i>
+        <i style="padding-right: 10px;" [ngClass]="item.icon" *ngIf="features.sidebar.iconsEnabled"></i>
         <h3 class="item-style">
           {{ item.label | translate }}
         </h3>
