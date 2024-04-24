@@ -7,7 +7,7 @@
   background-color: rgb(34, 40, 49);
   height          : 5vh;
 
-  .mat-toolbar-row {
+  .navbar-content {
     display    : flex;
     align-items: center;
     height     : 100%;
@@ -23,47 +23,13 @@
       align-items    : center;
       justify-content: center;
 
-      &:hover .hamburger-icon>.hamburger-line {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .hamburger-icon {
-        display : block;
-        position: relative;
-        width   : 30px;
-        height  : 20px;
-
-        .hamburger-line {
-          background   : #fff;
-          height       : 3px;
-          position     : absolute;
-          left         : 0;
-          width        : 100%;
-          border-radius: 3px;
-          transition   : 0.4s;
-        }
-
-        .hamburger-line:nth-child(1) {
-          top: 0;
-        }
-
-        .hamburger-line:nth-child(2) {
-          top: 8px;
-        }
-
-        .hamburger-line:nth-child(3) {
-          top: 16px;
-        }
-      }
-    }
-
-    .nav-settings-btn {
-      color: white;
-
-      &:hover {
-        cursor    : pointer;
-        color     : rgba(255, 255, 255, 0.1);
-        transition: 0.4s;
+      .sidebar-button-icon {
+        color: white;
+        font-size: 30px;
+        
+        &:hover {
+          cursor: pointer;
+        }   
       }
     }
 
@@ -99,17 +65,12 @@
           cursor          : pointer;
         }
 
-        i {
-          font-size   : 1.3vw;
-          margin-right: 10px;
-        }
-
         .item-style {
           display      : block;
+          font-size    : 1.3vw;
           white-space  : nowrap;
           overflow     : hidden;
           text-overflow: ellipsis;
-          font-size    : 1.3vw;
         }
       }
     }
