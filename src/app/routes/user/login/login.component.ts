@@ -10,23 +10,37 @@ import { UserService } from '../../../services/user.service';
 })
 
 export class LoginComponent {
+  model: any = {};
+  isLoggedIn: boolean = false;
   loginGroup: FormGroup;
-  private token: string = '';
   hidePassword = true;
   isLoading: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private userService: UserService) {
     this.loginGroup = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email, Validators.pattern('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}$')]],
+      // email: ['', [Validators.required, Validators.email, Validators.pattern('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}$')]]
+      username: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
 
   login() {
     if (this.loginGroup.valid) {
-      this.authService.login(this.loginGroup.value.email, this.loginGroup.value.password);
-      // this.userService.getUsers();
+      this.isLoading = true; // Show loading indicator
+      const loginData = this.loginGroup.value;
+
+      this.authService.login(loginData).subscribe({
+        next: (res) => {
+          console.log('Login successful:', res);
+          this.isLoading = false; // Hide loading indicator
+        },
+        error: (error) => {
+          console.error('Login error:', error);
+          this.isLoading = false; // Hide loading indicator
+        }
+      });
+    } else {
+      console.error('Form is invalid:', this.loginGroup.errors);
     }
   }
-  
-}
+  }

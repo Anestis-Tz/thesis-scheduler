@@ -8,7 +8,8 @@
                 <h3 class="text-center login2-msg"> Login to continue</h3>
                     <mat-form-field class="form-element" appearance="fill">
                         <mat-label>{{ "gen_email" | translate }}</mat-label>
-                        <input matInput formControlName="email" type="email" placeholder="{{ 'gen_email' | translate }}">
+                        <!-- Temporary changed to username until i figure out the login method -->
+                        <input matInput formControlName="username" type="text" placeholder="{{ 'gen_email' | translate }}">
                         <mat-error *ngIf="">{{ "gen_invalid_email" | translate }}</mat-error>
                     </mat-form-field>
 

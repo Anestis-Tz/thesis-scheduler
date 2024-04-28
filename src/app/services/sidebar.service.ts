@@ -20,6 +20,15 @@ export class SidebarService {
         action: "changeLocation('')",
       },
     },
+    REGISTRATION: {
+      needsLogin: true,
+      data: {
+        label: 'class_registration',
+        icon: 'fas fa-calendar-plus h2',
+        location: '/class-registration',
+        action: "changeLocation('class-registration')",
+      },
+    },
     SETTINGS: {
       needsLogin: true,
       data: {
@@ -55,17 +64,6 @@ export class SidebarService {
 
   constructor() {
     // Conditional Sidebar Items
-    if (this.features.classRegistration.enabled) {
-      this.mainItems.REGISTRATION = {
-        needsLogin: true,
-        data: {
-          label: 'class_registration',
-          icon: 'fas fa-clipboard-list h2',
-          location: '/class-registration',
-          action: "changeLocation('class-registration')",
-        },
-      };
-    }
     if (this.features.appointments.enabled) {
       this.mainItems.APPOINTMENT = {
         needsLogin: true,
