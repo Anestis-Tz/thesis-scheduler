@@ -11,14 +11,14 @@ export class SidebarService {
   features = environment.features;
 
   mainItems: any = {
-    HOME: {
-      needsLogin: false,
-      data: {
-        label: 'home',
-        icon: 'fas fa-home h2',
-        location: '/',
-        action: "changeLocation('')",
-      },
+    CLASSES: {
+        needsLogin: false,
+        data: {
+          label: 'Classes',
+          icon: 'fas fa-calendar-alt h2',
+          location: '/classes',
+          action: "changeLocation('classes')",
+        }
     },
     REGISTRATION: {
       needsLogin: true,
@@ -27,15 +27,6 @@ export class SidebarService {
         icon: 'fas fa-calendar-plus h2',
         location: '/class-registration',
         action: "changeLocation('class-registration')",
-      },
-    },
-    SETTINGS: {
-      needsLogin: true,
-      data: {
-        label: 'settings',
-        icon: 'fas fa-cog h2',
-        location: '/settings',
-        action: "changeLocation('settings')",
       },
     },
     PROFILE: {
@@ -47,6 +38,24 @@ export class SidebarService {
         action: "changeLocation('profile')",
       },
     },
+    SETTINGS: {
+      needsLogin: true,
+      data: {
+        label: 'settings',
+        icon: 'fas fa-cog h2',
+        location: '/settings',
+        action: "changeLocation('settings')",
+      },
+    },
+    LOGOUT: {
+      needsLogin: true,
+      data: {
+        label: 'logout',
+        icon: 'fas fa-sign-out-alt h2',
+        location: '',
+        action: 'logOut()',
+      },
+    }
   };
 
   // Not working for now, needs fixing

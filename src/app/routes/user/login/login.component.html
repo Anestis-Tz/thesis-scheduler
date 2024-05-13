@@ -10,6 +10,7 @@
                         <mat-label>{{ "gen_email" | translate }}</mat-label>
                         <!-- Temporary changed to username until i figure out the login method -->
                         <input matInput formControlName="username" type="text" placeholder="{{ 'gen_email' | translate }}">
+                        <mat-icon matPrefix class="mat-prefix">person</mat-icon>
                         <mat-error *ngIf="">{{ "gen_invalid_email" | translate }}</mat-error>
                     </mat-form-field>
 
@@ -17,6 +18,7 @@
                         <mat-label>{{ "gen_password" | translate }}</mat-label>
                         <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" type="password" placeholder="{{ 'gen_password' | translate }}">
                         <mat-icon matSuffix (click)="hidePassword = !hidePassword" class="mat-suffix">{{ hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        <mat-icon matPrefix class="mat-prefix">lock</mat-icon>
                         <mat-error *ngIf="">{{'error_required_error' | translate}}</mat-error>
                     </mat-form-field>
 

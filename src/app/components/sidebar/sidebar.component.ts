@@ -3,6 +3,7 @@ import { SidebarService } from '../../services/sidebar.service';
 import { environment } from '../../../environment';
 import { AuthService } from '../../services/auth.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,7 +19,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   items: any;
   bottomItems: any;
 
-  constructor(private sidebarService: SidebarService, private authService: AuthService) {
+  constructor(private sidebarService: SidebarService, private authService: AuthService, private router: Router) {
     this.sidebarService.getState().subscribe(isOpen => {
       this.isOpen = isOpen;
     });
@@ -49,6 +50,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
   //Actions
   changeLocation(location: any) {
     this.sidebarService.toggle();
-    window.location = location;
+    this.router.navigate([location]);
   };
 }

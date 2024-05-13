@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit{
   items: any;
   bottomItems: any;
 
-  constructor(private sidebarService: SidebarService, private authService: AuthService) { }
+  constructor(private sidebarService: SidebarService, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.userIsAuthenticated = this.authService.getIsAuth();
@@ -35,7 +35,7 @@ export class NavbarComponent implements OnInit{
   }
   
   changeLocation(location: any) {
-    window.location = location;
+    this.router.navigate([location]);
   };
   
   ngOnDestroy() {
