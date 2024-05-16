@@ -5,7 +5,6 @@ import { filter } from 'rxjs/operators';
 import { environment } from '../../../environment';
 import { AuthService } from '../../services/auth.service';
 import { Subscription } from 'rxjs';
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -40,6 +39,22 @@ export class NavbarComponent implements OnInit{
   
   ngOnDestroy() {
     this.authListenerSubs.unsubscribe();
+  }
+
+  openSettings() {
+    this.changeLocation('settings');
+  }
+
+  openHelp() {
+    // this.changeLocation('help');
+  }
+
+  openProfile() {
+    this.changeLocation('profile');
+  }
+
+  logout() {
+    // this.authService.logout();
   }
 
   isLoginRoute: boolean = false;

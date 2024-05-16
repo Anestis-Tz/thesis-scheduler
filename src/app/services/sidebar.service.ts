@@ -28,33 +28,6 @@ export class SidebarService {
         location: '/class-registration',
         action: "changeLocation('class-registration')",
       },
-    },
-    PROFILE: {
-      needsLogin: true,
-      data: {
-        label: 'profile',
-        icon: 'fas fa-user-circle h2',
-        location: '/profile',
-        action: "changeLocation('profile')",
-      },
-    },
-    SETTINGS: {
-      needsLogin: true,
-      data: {
-        label: 'settings',
-        icon: 'fas fa-cog h2',
-        location: '/settings',
-        action: "changeLocation('settings')",
-      },
-    },
-    LOGOUT: {
-      needsLogin: true,
-      data: {
-        label: 'logout',
-        icon: 'fas fa-sign-out-alt h2',
-        location: '',
-        action: 'logOut()',
-      },
     }
   };
 

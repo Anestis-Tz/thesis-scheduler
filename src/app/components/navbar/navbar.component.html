@@ -17,8 +17,28 @@
           {{ item.label | translate }}
         </h3>
       </div>
+        <mat-icon class="nav-settings-icon" [matMenuTriggerFor]="navMenu">settings</mat-icon>
     </div>
     
+
+    <mat-menu #navMenu="matMenu" >
+      <button mat-menu-item class="mat-menu-item" (click)="openSettings()">
+        <mat-icon>settings</mat-icon>
+        {{ "gen_settings" | translate }}
+      </button>
+      <button mat-menu-item class="mat-menu-item" (click)="openHelp()">
+        <mat-icon>help</mat-icon>
+        {{ "gen_help" | translate }}
+      </button>
+      <button mat-menu-item class="mat-menu-item" (click)="openProfile()">
+        <mat-icon>account_circle</mat-icon>
+        {{ "gen_profile" | translate }}
+      </button>
+      <button mat-menu-item class="mat-menu-item" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        {{ "gen_logout" | translate }}
+      </button>
+    </mat-menu>
 
   </mat-toolbar-row>
 </mat-toolbar>
