@@ -11,6 +11,15 @@ export class SidebarService {
   features = environment.features;
 
   mainItems: any = {
+    ADMIN: {
+      needsLogin: true,
+      data: {
+        label: 'Admin',
+        icon: 'fas fa-user-shield h2',
+        location: '/admin',
+        action: "changeLocation('admin')",
+      }
+    },
     CLASSES: {
         needsLogin: false,
         data: {
@@ -28,7 +37,7 @@ export class SidebarService {
         location: '/class-registration',
         action: "changeLocation('class-registration')",
       },
-    }
+    },
   };
 
   // Not working for now, needs fixing

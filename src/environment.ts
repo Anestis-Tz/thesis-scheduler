@@ -16,7 +16,7 @@ export const environment = {
             hasSidebarSimple: false
         },
         footer: {
-            hasFooter: false
+            hasFooter: true
         },
     }
 };

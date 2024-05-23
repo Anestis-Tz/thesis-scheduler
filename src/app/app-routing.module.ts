@@ -11,17 +11,19 @@ import { RegisterComponent } from './routes/user/register/register.component';
 import { TermsComponent } from './routes/terms/terms.component';
 import { ClassRegistrationComponent } from './routes/class-registration/class-registration.component';
 import { Page404Component } from './routes/page404/page404.component';
+import { AdminComponent } from './routes/admin/admin/admin.component';
 
 const routes: Routes = [
-  { path: 'settings', component: SettingsComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'terms', component: TermsComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'admin', component: AdminComponent },
+  { path: 'settings', component: SettingsComponent },
+  { path: 'class-registration', component: ClassRegistrationComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'class-registration', component: ClassRegistrationComponent },
-  { path: '404', component: Page404Component }
+  { path: '404', component: Page404Component },
+  { path: 'terms', component: TermsComponent },
 ];
 
 @NgModule({

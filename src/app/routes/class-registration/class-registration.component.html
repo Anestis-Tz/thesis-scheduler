@@ -26,7 +26,7 @@
         <mat-form-field class="custom-mat-form-field">
           <mat-label>Time</mat-label>
           <mat-select formControlName="lectureControl" required>
-            <mat-option *ngFor="let lecture of availableLectures" [value]="lecture.value">{{lecture.viewValue}}</mat-option>
+            <mat-option style="font-size: 300px;" *ngFor="let lecture of availableLectures" [value]="lecture.value">{{lecture.viewValue}}</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
