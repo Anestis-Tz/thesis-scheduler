@@ -18,5 +18,8 @@ export const environment = {
         footer: {
             hasFooter: true
         },
+        admin: {
+            isAdmin: true
+        }
     }
 };

@@ -17,8 +17,6 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 
-/** PrimeNG for Routes */
-
 /** Components */
 import { AppComponent } from './app.component';
 import { SettingsComponent } from './routes/settings/settings.component';

@@ -40,15 +40,32 @@ export class SidebarService {
     },
   };
 
-  // Not working for now, needs fixing
-  mainBottomItems: any = {
-    LOGOUT: {
+  adminItems: any = {
+    STUDENTS: {
       needsLogin: true,
       data: {
-        label: 'logout',
-        icon: 'fas fa-sign-out-alt h2',
-        location: '',
-        action: 'logOut()',
+        label: 'students',
+        icon: 'fas fa-users h2',
+        location: '/students',
+        action: "changeLocation('students')",
+      },
+    },
+    CLASSES: {
+      needsLogin: true,
+      data: {
+        label: 'classes',
+        icon: 'fas fa-calendar-alt h2',
+        location: '/classes',
+        action: "changeLocation('classes')",
+      },
+    },
+    GENERAL: {
+      needsLogin: true,
+      data: {
+        label: 'general',
+        icon: 'fas fa-cogs h2',
+        location: '/general',
+        action: "changeLocation('general')",
       },
     },
   };
@@ -72,13 +89,7 @@ export class SidebarService {
     let items = []
     for (let item in this.mainItems) items.push(this.mainItems[item].data);
       return items;
-    }
-
-  getBottomSidebarItems() {
-    let bottomItems = [];
-    for (let bottomItem in this.mainBottomItems) bottomItems.push(this.mainBottomItems[bottomItem].data);
-      return bottomItems;
-    }
+  }
 
   toggle() {
     this.sidebarState.next(!this.sidebarState.value);
