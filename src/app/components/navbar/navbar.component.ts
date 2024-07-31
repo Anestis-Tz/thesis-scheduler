@@ -26,7 +26,6 @@ export class NavbarComponent implements OnInit{
       this.userIsAuthenticated = isAuthenticated;
     });
     this.items = this.sidebarService.getMainSidebarItems();
-    this.bottomItems = this.sidebarService.getBottomSidebarItems();
   }
 
   toggleSidebar() {

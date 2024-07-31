@@ -35,8 +35,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
     
     // Get main sidebar items
     this.items = this.sidebarService.getMainSidebarItems();
-    // Get bottom sidebar items
-    this.bottomItems = this.sidebarService.getBottomSidebarItems();
   }
 
   ngOnDestroy() {

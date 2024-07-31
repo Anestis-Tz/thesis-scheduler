@@ -1,3 +1,27 @@
-<div>
-    
+<div class="admin-container">
+    <!-- Admin Side Items -->
+    <div class="admin-items-container">
+        <ul class="admin-items">
+            <li class="admin-item" 
+                *ngFor="let item of adminItems | keyvalue"
+                (click)="onItemSelect(item.key)">
+                <i class="admin-item-icon" [class]="item.value.icon"></i>
+                <span class="admin-item-text">{{item.value.name}}</span>
+            </li>
+        </ul>
+    </div>
+    <!-- Admin Content -->
+    <div class="admin-content-container">
+        <div *ngIf="selectedItem === 'USERS'">
+            <!-- Users Content -->
+            <h2>Manage Users</h2>
+            <p>Here you can manage users.</p>
+        </div>
+        <div *ngIf="selectedItem === 'EDIT_TOOL'">
+            <!-- Edit Tool Content -->
+            <h2>Edit Tools</h2>
+            <p>Here you can edit tools.</p>
+        </div>
+        <!-- Add more content blocks as needed -->
+    </div>
 </div>

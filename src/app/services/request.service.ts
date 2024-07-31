@@ -20,23 +20,7 @@ export class RequestService {
 
     return new Promise(resolve => {
       this.http.get<any>(params.url, { headers: reqheaders }).subscribe(res => {
-        // this.
       })
     })
   }
-
-  // checkResponse(resolve, params, data, error) {
-
-  // }
-
-  // checkError(api, resp, error) {
-    
-  //   if (resp && resp.success == false) {
-
-  //     switch (api) {
-  //       case "/api/user/login":
-  //     };
-
-  //   }
-  // }
 }
