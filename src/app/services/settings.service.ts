@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { RequestService } from './request.service';
 
 @Injectable({
     providedIn: 'root'
 })
 export class SettingsService {
 
-    constructor() { }
+    constructor(private requestService: RequestService) { }
 
     mainSettingsItems: any = {
         CHANGE_LANGUAGE: {
@@ -39,6 +40,12 @@ export class SettingsService {
         for (let settingItem in this.mainSettingsItems) {
             settingsItems.push(this.mainSettingsItems[settingItem].data);
         }
+        
+        this.requestService.mainGetRequest({ url: '/Courses' }).then((data: any) => {
+            console.log(data);
+        }).catch((error: any) => {
+            console.error(error);
+        });
         return settingsItems;
     }
 }
