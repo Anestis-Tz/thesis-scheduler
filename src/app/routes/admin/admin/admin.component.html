@@ -5,9 +5,9 @@
         <div class="admin-profile-container">
             <div class="admin-profile-header">
                 <i class="admin-profile-icon fa fa-user"></i>
-            <p class="admin-profile-name">Αργύρης Κουρέας</p>
+            <p class="admin-profile-name"></p>
             </div>
-            <p class="admin-profile-role">Admin</p>
+            <p class="admin-profile-role"></p>
         </div>
         <ul class="admin-items">
             <li class="admin-item" *ngFor="let item of adminItems | keyvalue" (click)="onItemSelect(item.key)">
@@ -19,15 +19,35 @@
 
     <!-- Admin Content -->
     <div class="admin-content-container">
-        <div *ngIf="selectedItem === 'USERS'">
-            <!-- Users Content -->
-            <h2>Manage Users</h2>
-            <p>Here you can manage users.</p>
+        <!-- Users Screen -->
+        <div *ngIf="selectedItem === 'USERS'" class="users-screen">
+          <h2 class="users-title">Manage Users</h2>
+          <table class="users-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.age }}</td>
+                <td>
+                  <button class="edit-btn" (click)="onEditUser(user)">Edit</button>
+                  <button class="delete-btn" (click)="onDeleteUser(user)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div *ngIf="selectedItem === 'EDIT_TOOL'">
-            <!-- Edit Tool Content -->
-            <h2>Edit Tools</h2>
-            <p>Here you can edit tools.</p>
-        </div>
-    </div>
+      </div>
+      
 </div>
